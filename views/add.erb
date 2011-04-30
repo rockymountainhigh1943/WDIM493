@@ -1,0 +1,37 @@
+<h1>New Event</h1>
+
+<p>Enter event details below:</p>
+
+<div id="add-outer">
+	<div id="add-inner">
+		<form method="post" action="/">
+			<div>
+				Name <input type="text" name="event-name" id="event-name">
+			</div>
+			<div>
+				Date <input type="text" name="event-date" id="event-date">
+			</div>
+			<div>
+				Type 
+				<select>
+					<option value="">Select Type</option>
+					<option value="Beer Vending">Beer Vending</option>
+					<option value="Booth">Booth</option>
+					<option value="Pearlick">Pearlick</option>
+					<option value="Other">Other</option>
+				</select>
+			</div>
+			<div>
+				Time <input type="text" name="event-time" id="event-time">
+			</div>
+			<div>
+				Needed <input type="text" name="event-needed" id="event-needed">
+			</div>
+			<div>
+				Description
+				<textarea cols="35" rows="5"></textarea>
+			</div>
+			<input type="submit" id="submit" value="Add Event!">
+		</form>
+	</div>
+</div>
