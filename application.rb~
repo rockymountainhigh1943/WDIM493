@@ -1,5 +1,4 @@
 require "sinatra"
-require "erb"
 
 helpers do
     include Rack::Utils
