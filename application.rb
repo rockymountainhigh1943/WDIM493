@@ -16,25 +16,26 @@ post '/account' do
 end
 
 ### View User Events
-get '/account/view/' do
+get '/account/view' do
 	erb :view
 end
 
 ### View All Events
-get '/account/view/all/' do
-	erb :all
+get '/account/view/all' do
+	erb :viewall
 end
 
 ### Request Switch
-get '/account/switch/' do
+get '/account/switch' do
 	erb :switch
 end
 
 ### Account Settings
-get '/account/settings/' do
+get '/account/settings' do
 	erb :settings
 end
 
+###########################
 ########## Admin ##########
 
 ### Admin Add Event
