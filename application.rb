@@ -7,7 +7,7 @@ end
 
 ### Home
 get '/' do
-	erb :main
+	erb :main, :locals => {:pagetitle => 'Welcome!'}
 end
 
 ### Dashboard
