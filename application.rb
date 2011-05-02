@@ -25,6 +25,11 @@ get '/account/switch/' do
 	erb :switch
 end
 
+### Account Settings
+get '/account/settings/' do
+	erb :settings
+end
+
 ########## Admin ##########
 
 ### Admin Add Event
