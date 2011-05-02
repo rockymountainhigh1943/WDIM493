@@ -13,6 +13,10 @@ post '/account' do
 	erb :account, :locals => {:name => params[:username]}
 end
 
+get '/account/view' do
+	erb :view
+end
+
 ########## Admin ##########
 
 ### Admin Add Event
