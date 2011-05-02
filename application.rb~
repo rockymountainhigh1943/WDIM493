@@ -22,7 +22,7 @@ end
 
 ### View All Events
 get '/account/view/all' do
-	erb :all
+	erb :viewall
 end
 
 ### Request Switch
