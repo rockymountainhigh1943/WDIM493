@@ -109,6 +109,7 @@ img#welcome {
 
 #content ul, #content ol {
 	list-style-position:inside;
+	margin-left:25px;
 }
 
 #content strong, #content b {
