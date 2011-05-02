@@ -20,6 +20,11 @@ get '/account/view/' do
 	erb :view
 end
 
+### View All Events
+get '/account/view/all/' do
+	erb :all
+end
+
 ### Request Switch
 get '/account/switch/' do
 	erb :switch
