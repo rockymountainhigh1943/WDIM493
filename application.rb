@@ -11,7 +11,7 @@ get '/' do
 end
 
 ### Dashboard
-post '/account/' do
+post '/account' do
 	erb :account, :locals => {:name => params[:username]}
 end
 
