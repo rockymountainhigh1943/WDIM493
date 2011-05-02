@@ -1,11 +1,6 @@
 require "sinatra"
 require "erb"
 
-helpers do
-    include Rack::Utils
-    alias_method :h, :escape_html
-end
-
 ### Home
 get '/' do
 	erb :main
