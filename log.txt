@@ -1,0 +1,100 @@
+2011-05-02T20:08:51+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/style.css dyno=web.1 queue=0 wait=0ms service=3ms bytes=2956
+2011-05-02T20:08:51+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/login.jpg dyno=web.1 queue=0 wait=0ms service=1ms bytes=2351
+2011-05-02T20:08:51+00:00 app[web.1]: 71.236.187.136 - - [02/May/2011 13:08:51] "GET /images/login.jpg HTTP/1.1" 200 2137 0.0004
+2011-05-02T20:08:51+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/logo.png dyno=web.1 queue=0 wait=0ms service=5ms bytes=4858
+2011-05-02T20:08:51+00:00 app[web.1]: 71.236.187.136 - - [02/May/2011 13:08:51] "GET /images/back.jpg HTTP/1.1" 200 1246 0.0005
+2011-05-02T20:08:51+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/back.jpg dyno=web.1 queue=0 wait=0ms service=1ms bytes=1460
+2011-05-02T20:08:51+00:00 app[web.1]: 71.236.187.136 - - [02/May/2011 13:08:51] "GET /images/welcome.jpg HTTP/1.1" 200 9244 0.0003
+2011-05-02T20:08:51+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/welcome.jpg dyno=web.1 queue=0 wait=0ms service=2ms bytes=9458
+2011-05-02T20:08:51+00:00 app[web.1]: 71.236.187.136 - - [02/May/2011 13:08:51] "GET /images/pass.jpg HTTP/1.1" 200 2227 0.0004
+2011-05-02T20:08:51+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/pass.jpg dyno=web.1 queue=0 wait=0ms service=1ms bytes=2441
+2011-05-02T20:08:51+00:00 app[web.1]: 71.236.187.136 - - [02/May/2011 13:08:51] "GET /images/user.jpg HTTP/1.1" 200 2163 0.0004
+2011-05-02T20:08:51+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/user.jpg dyno=web.1 queue=0 wait=0ms service=3ms bytes=2377
+2011-05-02T20:08:53+00:00 app[web.1]: 71.236.187.136 - - [02/May/2011 13:08:53] "POST /account HTTP/1.0" 200 747 0.0012
+2011-05-02T20:08:53+00:00 heroku[router]: POST freezing-leaf-974.heroku.com/account dyno=web.1 queue=0 wait=0ms service=2ms bytes=927
+2011-05-02T20:08:54+00:00 app[web.1]: 71.236.187.136 - - [02/May/2011 13:08:54] "GET /style.css HTTP/1.0" 304 - 0.0009
+2011-05-02T20:08:54+00:00 app[web.1]: 71.236.187.136 - - [02/May/2011 13:08:54] "GET /images/logo.png HTTP/1.1" 200 4645 0.0003
+2011-05-02T20:08:54+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/style.css dyno=web.1 queue=0 wait=0ms service=3ms bytes=176
+2011-05-02T20:08:54+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/logo.png dyno=web.1 queue=0 wait=0ms service=10ms bytes=4858
+2011-05-02T20:08:54+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/back.jpg dyno=web.1 queue=0 wait=0ms service=3ms bytes=176
+2011-05-02T20:08:55+00:00 app[web.1]: 71.236.187.136 - - [02/May/2011 13:08:55] "GET /account/view HTTP/1.1" 200 532 0.0010
+2011-05-02T20:08:55+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/account/view dyno=web.1 queue=0 wait=0ms service=2ms bytes=712
+2011-05-02T20:08:59+00:00 app[web.1]: 71.236.187.136 - - [02/May/2011 13:08:59] "GET /account/view/all HTTP/1.1" 200 516 0.0008
+2011-05-02T20:08:59+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/account/view/all dyno=web.1 queue=0 wait=0ms service=1ms bytes=696
+2011-05-02T20:08:59+00:00 app[web.1]: 71.236.187.136 - - [02/May/2011 13:08:59] "GET /style.css HTTP/1.0" 304 - 0.0005
+2011-05-02T20:08:59+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/style.css dyno=web.1 queue=0 wait=0ms service=5ms bytes=176
+2011-05-02T20:08:59+00:00 app[web.1]: 71.236.187.136 - - [02/May/2011 13:08:59] "GET /images/logo.png HTTP/1.0" 304 - 0.0004
+2011-05-02T20:08:59+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/logo.png dyno=web.1 queue=0 wait=0ms service=1ms bytes=176
+2011-05-02T20:08:59+00:00 app[web.1]: 71.236.187.136 - - [02/May/2011 13:08:59] "GET /images/back.jpg HTTP/1.1" 200 1246 0.0005
+2011-05-02T20:09:01+00:00 app[web.1]: 71.236.187.136 - - [02/May/2011 13:09:01] "GET /account/switch HTTP/1.1" 200 687 0.0010
+2011-05-02T20:09:01+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/account/switch dyno=web.1 queue=0 wait=0ms service=2ms bytes=867
+2011-05-02T20:09:02+00:00 app[web.1]: 71.236.187.136 - - [02/May/2011 13:09:02] "GET /images/back.jpg HTTP/1.1" 200 1246 0.0005
+2011-05-02T20:09:02+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/back.jpg dyno=web.1 queue=0 wait=0ms service=5ms bytes=1460
+2011-05-02T20:09:04+00:00 app[web.1]: 71.236.187.136 - - [02/May/2011 13:09:04] "GET /account/settings HTTP/1.1" 200 517 0.0008
+2011-05-02T20:09:04+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/account/settings dyno=web.1 queue=0 wait=0ms service=2ms bytes=697
+2011-05-02T20:09:04+00:00 app[web.1]: 71.236.187.136 - - [02/May/2011 13:09:04] "GET /style.css HTTP/1.1" 200 2730 0.0005
+2011-05-02T20:09:04+00:00 app[web.1]: 71.236.187.136 - - [02/May/2011 13:09:04] "GET /images/logo.png HTTP/1.0" 304 - 0.0003
+2011-05-02T20:09:04+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/style.css dyno=web.1 queue=0 wait=0ms service=10ms bytes=2956
+2011-05-02T20:09:04+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/logo.png dyno=web.1 queue=0 wait=0ms service=9ms bytes=176
+2011-05-02T20:09:07+00:00 app[web.1]: 71.236.187.136 - - [02/May/2011 13:09:07] "GET /account/switch HTTP/1.1" 200 687 0.0008
+2011-05-02T20:09:07+00:00 app[web.1]: 71.236.187.136 - - [02/May/2011 13:09:07] "GET /style.css HTTP/1.1" 200 2730 0.0005
+2011-05-02T20:09:07+00:00 app[web.1]: 71.236.187.136 - - [02/May/2011 13:09:07] "GET /images/logo.png HTTP/1.0" 304 - 0.0004
+2011-05-02T20:09:07+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/logo.png dyno=web.1 queue=0 wait=0ms service=4ms bytes=176
+2011-05-02T20:09:07+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/style.css dyno=web.1 queue=0 wait=0ms service=31ms bytes=2956
+2011-05-02T20:09:08+00:00 app[web.1]: 71.236.187.136 - - [02/May/2011 13:09:08] "GET /images/back.jpg HTTP/1.0" 304 - 0.0004
+2011-05-02T20:09:08+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/back.jpg dyno=web.1 queue=0 wait=0ms service=2ms bytes=176
+2011-05-02T20:11:44+00:00 app[web.1]: 71.236.187.136 - - [02/May/2011 13:11:44] "GET / HTTP/1.1" 200 1235 0.0008
+2011-05-02T20:11:44+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/ dyno=web.1 queue=0 wait=0ms service=2ms bytes=1416
+2011-05-02T20:11:44+00:00 app[web.1]: 71.236.187.136 - - [02/May/2011 13:11:44] "GET /style.css HTTP/1.1" 200 2730 0.0004
+2011-05-02T20:11:44+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/style.css dyno=web.1 queue=0 wait=0ms service=5ms bytes=2956
+2011-05-02T20:11:44+00:00 app[web.1]: 71.236.187.136 - - [02/May/2011 13:11:44] "GET /images/welcome.jpg HTTP/1.1" 200 9244 0.0005
+2011-05-02T20:11:44+00:00 app[web.1]: 71.236.187.136 - - [02/May/2011 13:11:44] "GET /images/login.jpg HTTP/1.1" 200 2137 0.0004
+2011-05-02T20:11:44+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/welcome.jpg dyno=web.1 queue=0 wait=0ms service=2ms bytes=9458
+2011-05-02T20:11:44+00:00 app[web.1]: 71.236.187.136 - - [02/May/2011 13:11:44] "GET /images/logo.png HTTP/1.1" 200 4645 0.0003
+2011-05-02T20:11:44+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/login.jpg dyno=web.1 queue=0 wait=0ms service=2ms bytes=2351
+2011-05-02T20:11:44+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/logo.png dyno=web.1 queue=0 wait=0ms service=1ms bytes=4858
+2011-05-02T20:11:44+00:00 app[web.1]: 71.236.187.136 - - [02/May/2011 13:11:44] "GET /images/back.jpg HTTP/1.0" 304 - 0.0047
+2011-05-02T20:11:44+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/back.jpg dyno=web.1 queue=0 wait=0ms service=14ms bytes=176
+2011-05-02T20:11:44+00:00 app[web.1]: 71.236.187.136 - - [02/May/2011 13:11:44] "GET /images/pass.jpg HTTP/1.0" 304 - 0.0003
+2011-05-02T20:11:44+00:00 app[web.1]: 71.236.187.136 - - [02/May/2011 13:11:44] "GET /images/user.jpg HTTP/1.1" 200 2163 0.0003
+2011-05-02T20:11:44+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/pass.jpg dyno=web.1 queue=0 wait=0ms service=1ms bytes=176
+2011-05-02T20:11:44+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/user.jpg dyno=web.1 queue=0 wait=0ms service=1ms bytes=2377
+2011-05-02T14:13:37-07:00 heroku[web.1]: State changed from up to down
+2011-05-02T21:13:39+00:00 app[web.1]: >> Stopping ...
+2011-05-03T01:59:15-07:00 heroku[slugc]: Slug compilation started
+2011-05-03T02:00:11-07:00 heroku[slugc]: Slug compilation finished
+2011-05-03T02:00:26-07:00 heroku[web.1]: Unidling
+2011-05-03T02:00:26-07:00 heroku[web.1]: State changed from created to starting
+2011-05-03T09:00:29+00:00 app[web.1]: 	from /app/.bundle/gems/ruby/1.9.1/gems/rack-1.2.2/lib/rack/builder.rb:63:in `new'
+2011-05-03T09:00:29+00:00 app[web.1]: 	from /home/heroku_rack/heroku.ru:11:in `block in <main>'
+2011-05-03T09:00:29+00:00 app[web.1]: 	from /usr/ruby1.9.2/lib/ruby/gems/1.9.1/gems/thin-1.2.6/lib/thin/controllers/controller.rb:175:in `load_rackup_config'
+2011-05-03T09:00:29+00:00 app[web.1]: 	from /usr/ruby1.9.2/bin/thin:19:in `load'
+2011-05-03T02:00:29-07:00 heroku[web.1]: State changed from starting to crashed
+2011-05-03T02:00:29-07:00 heroku[web.1]: State changed from crashed to created
+2011-05-03T02:00:29-07:00 heroku[web.1]: State changed from created to starting
+2011-05-03T09:00:33+00:00 app[web.1]: /app/.bundle/gems/ruby/1.9.1/gems/dm-core-1.1.0/lib/dm-core/adapters.rb:163:in `require': no such file to load -- dm-postgres-adapter (LoadError)
+2011-05-03T09:00:33+00:00 app[web.1]: 	from /app/.bundle/gems/ruby/1.9.1/gems/dm-core-1.1.0/lib/dm-core/adapters.rb:163:in `load_adapter'
+2011-05-03T09:00:33+00:00 app[web.1]: 	from /app/.bundle/gems/ruby/1.9.1/gems/dm-core-1.1.0/lib/dm-core/adapters.rb:133:in `adapter_class'
+2011-05-03T09:00:33+00:00 app[web.1]: 	from /app/.bundle/gems/ruby/1.9.1/gems/dm-core-1.1.0/lib/dm-core/adapters.rb:13:in `new'
+2011-05-03T09:00:33+00:00 app[web.1]: 	from /app/.bundle/gems/ruby/1.9.1/gems/dm-core-1.1.0/lib/dm-core.rb:219:in `setup'
+2011-05-03T09:00:33+00:00 app[web.1]: 	from /app/environment.rb:16:in `block in <top (required)>'
+2011-05-03T09:00:33+00:00 app[web.1]: 	from /app/.bundle/gems/ruby/1.9.1/gems/sinatra-1.2.6/lib/sinatra/base.rb:1211:in `configure'
+2011-05-03T09:00:33+00:00 app[web.1]: 	from (__DELEGATE__):3:in `configure'
+2011-05-03T09:00:33+00:00 app[web.1]: 	from /app/environment.rb:11:in `<top (required)>'
+2011-05-03T09:00:33+00:00 app[web.1]: 	from /app/application.rb:4:in `require'
+2011-05-03T09:00:33+00:00 app[web.1]: 	from /app/application.rb:4:in `<top (required)>'
+2011-05-03T09:00:33+00:00 app[web.1]: 	from <internal:lib/rubygems/custom_require>:29:in `require'
+2011-05-03T09:00:33+00:00 app[web.1]: 	from <internal:lib/rubygems/custom_require>:29:in `require'
+2011-05-03T09:00:33+00:00 app[web.1]: 	from config.ru:1:in `block (3 levels) in <main>'
+2011-05-03T09:00:33+00:00 app[web.1]: 	from /home/heroku_rack/heroku.ru:23:in `eval'
+2011-05-03T09:00:33+00:00 app[web.1]: 	from /home/heroku_rack/heroku.ru:23:in `block (3 levels) in <main>'
+2011-05-03T09:00:33+00:00 app[web.1]: 	from /app/.bundle/gems/ruby/1.9.1/gems/rack-1.2.2/lib/rack/builder.rb:46:in `instance_eval'
+2011-05-03T09:00:33+00:00 app[web.1]: 	from /app/.bundle/gems/ruby/1.9.1/gems/rack-1.2.2/lib/rack/builder.rb:46:in `initialize'
+2011-05-03T09:00:33+00:00 app[web.1]: 	from /app/.bundle/gems/ruby/1.9.1/gems/rack-1.2.2/lib/rack/builder.rb:63:in `new'
+2011-05-03T09:00:33+00:00 app[web.1]: 	from /app/.bundle/gems/ruby/1.9.1/gems/rack-1.2.2/lib/rack/builder.rb:63:in `map'
+2011-05-03T09:00:33+00:00 app[web.1]: 	from /home/heroku_rack/heroku.ru:18:in `block (2 levels) in <main>'
+2011-05-03T09:00:33+00:00 app[web.1]: 	from /app/.bundle/gems/ruby/1.9.1/gems/rack-1.2.2/lib/rack/builder.rb:46:in `instance_eval'
+2011-05-03T09:00:33+00:00 app[web.1]: 	from /app/.bundle/gems/ruby/1.9.1/gems/rack-1.2.2/lib/rack/builder.rb:46:in `initialize'
+2011-05-03T09:00:33+00:00 app[web.1]: 	from /home/heroku_rack/heroku.ru:11:in `new'
+2011-05-03T09:00:41+00:00 heroku[router]: Error H10 (App crashed) -> GET freezing-leaf-974.heroku.com/favicon.ico dyno=none queue=0 wait=0ms service=0ms bytes=0
+2011-05-03T09:00:42+00:00 heroku[router]: Error H10 (App crashed) -> GET freezing-leaf-974.heroku.com/favicon.ico dyno=none queue=0 wait=0ms service=0ms bytes=0
