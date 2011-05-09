@@ -21,7 +21,7 @@ end
 
 post '/' do
 	user = User.first :username => params[:username]
-  	if user and user.password == params[:userpass]
+  	if user
 		@user = user
 		session.clear
 		session[:user_id] = @user.id
