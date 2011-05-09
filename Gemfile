@@ -8,7 +8,8 @@ gem 'dm-timestamps'
 gem 'dm-validations'
 gem 'dm-aggregates'
 gem 'dm-migrations'
-gem 'bcrypt-ruby'
+gem 'dm-postgres-adapter'
+gem 'haml'
 
 group :test do
   gem 'rspec', :require => 'spec'
