@@ -21,17 +21,17 @@ end
 
 post '/account' do
 	user = User.first :username => params[:username]
-	if user and user.password == params[:password]
+	if user and user.password == params[:userpass]
 		@user = user
 		session.clear
 		session[:id] = @user.id
-		redirect '/account'
+		erb :account, :locals => { :name => user.first_name }
 	end
 end
 
 ### Dashboard
 get '/account' do
-	#redirect '/' if !@user
+	redirect '/' if !@user
 	erb :account
 end
 
