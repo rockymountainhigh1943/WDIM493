@@ -31,7 +31,7 @@ end
 
 ### Dashboard
 get '/account' do
-	redirect '/' if !@user
+	#redirect '/' if !@user
 	erb :account
 end
 
