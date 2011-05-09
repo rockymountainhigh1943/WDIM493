@@ -19,9 +19,20 @@ get '/' do
 	erb :main
 end
 
-### Dashboard
 post '/account' do
-	erb :account, :locals => {:name => params[:username]}
+	user = User.first :username => params[:username]
+	if user and user.password == params[:password]
+		@user = user
+		session.clear
+		session[:id] = @user.id
+		redirect '/account'
+	end
+end
+
+### Dashboard
+get '/account' do
+	redirect '/' if !@user
+	erb :account
 end
 
 ### View User Events
