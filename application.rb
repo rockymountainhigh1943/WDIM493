@@ -32,16 +32,19 @@ end
 
 ### View All Events
 get '/account/view/all' do
+	redirect '/' if !@user
 	erb :viewall
 end
 
 ### Request Switch
 get '/account/switch' do
+	redirect '/' if !@user
 	erb :switch
 end
 
 ### Account Settings
 get '/account/settings' do
+	redirect '/' if !@user
 	erb :settings
 end
 
@@ -50,5 +53,6 @@ end
 
 ### Admin Add Event
 get '/admin/add' do
+	redirect '/' if !@user
 	erb :add
 end
