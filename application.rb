@@ -25,7 +25,7 @@ post '/' do
   	if user and user.password == params[:userpass]
 		@user = user
 		session.clear
-		session[:user_id] = @user.id
+		session[:id] = @user.id
 		erb :account
 	end
 end
