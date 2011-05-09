@@ -21,12 +21,12 @@ end
 
 ### Dashboard
 post '/account' do
-	redirect '/' if !@user
 	erb :account, :locals => {:name => params[:username]}
 end
 
 ### View User Events
 get '/account/view' do
+	redirect '/' if !@user
 	erb :view
 end
 
