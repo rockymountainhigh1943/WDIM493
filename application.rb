@@ -20,8 +20,7 @@ get '/' do
 end
 
 post '/' do
-	user = User.first :username => params[:username]
-  	if user
+  	if params[:username] == 'jake'
 		@user = user
 		session.clear
 		session[:user_id] = @user.id
