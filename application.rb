@@ -19,7 +19,7 @@ get '/' do
 	erb :main
 end
 
-post '/account' do
+post '/' do
 	user = User.first :username => params[:username]
   	if user and user.password == params[:userpass]
 		@user = user
