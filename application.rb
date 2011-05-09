@@ -3,9 +3,15 @@ require 'bundler/setup'
 require 'sinatra'
 require File.join(File.dirname(__FILE__), 'environment')
 
+enable :sessions
+
 helpers do
     include Rack::Utils
     alias_method :h, :escape_html
+end
+
+before do
+	@user = User.get(session[:id])
 end
 
 ### Home
@@ -15,6 +21,7 @@ end
 
 ### Dashboard
 post '/account' do
+	redirect '/' if !@user
 	erb :account, :locals => {:name => params[:username]}
 end
 
