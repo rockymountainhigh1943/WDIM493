@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'bundler/setup'
 require 'sinatra'
+require 'data_mapper'
 require File.join(File.dirname(__FILE__), 'environment')
 
 enable :sessions
