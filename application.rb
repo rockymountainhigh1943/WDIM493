@@ -26,7 +26,7 @@ post '/' do
 		@user = user
 		session.clear
 		session[:id] = @user.id
-		erb :account
+		redirect '/'
 	end
 end
 
