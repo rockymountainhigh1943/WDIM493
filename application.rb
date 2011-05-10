@@ -21,9 +21,7 @@ helpers do
     alias_method :h, :escape_html
 end
 
-before do
-	@user = User.get(session[:user_id])
-end
+
 
 ### Home
 get '/' do
@@ -41,7 +39,7 @@ end
 
 ### Dashboard
 get '/account' do
-	
+	redirect '/' if !@user
 	erb :account
 end
 
