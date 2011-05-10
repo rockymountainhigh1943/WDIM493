@@ -5,8 +5,11 @@ require 'dm-timestamps'
 require 'dm-validations'
 require 'dm-aggregates'
 require 'dm-migrations'
+require 'dm-types'
+require 'dm-types/bcrypt_hash'
+require 'haml'
 require 'ostruct'
-require 'sinatra'
+require 'bcrypt'
 
 configure do
 # load models
