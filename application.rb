@@ -12,7 +12,7 @@ helpers do
 end
 
 before do
-	@user = User.get(session[:id])
+	@user = User.get(session[:user_id])
 end
 
 ### Home
@@ -25,7 +25,7 @@ post '/' do
   	if user and user.password == params[:userpass]
 		@user = user
 		session.clear
-		session[:id] = @user.id
+		session[:user_id] = @user.id
 		redirect '/'
 	end
 end
