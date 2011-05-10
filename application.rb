@@ -21,7 +21,9 @@ helpers do
     alias_method :h, :escape_html
 end
 
-
+before do
+	@user = User.get(session[:user_id])
+end
 
 ### Home
 get '/' do
@@ -34,6 +36,8 @@ post '/' do
 		@user = user
 		session[:user_id] = @user.id
 		redirect '/'
+		else
+		erb :main, :locals => { :message = 'Invalid username or password' }
 	end
 end
 
