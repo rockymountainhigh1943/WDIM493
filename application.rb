@@ -27,7 +27,7 @@ end
 
 ### Home
 get '/' do
-	erb :main, :locals => { :session => session }
+	erb :main
 end
 
 post '/' do
