@@ -26,17 +26,12 @@ post '/' do
 		@user = user
 		session.clear
 		session[:user_id] = @user.id
-		redirect '/account'
+		redirect '/'
 	end
 end
 
 ### Dashboard
 get '/account' do
-	redirect '/' if !@user
-	erb :account
-end
-
-post '/account' do
 	redirect '/' if !@user
 	erb :account
 end
