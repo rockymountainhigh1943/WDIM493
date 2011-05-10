@@ -4,7 +4,19 @@ require 'sinatra'
 require 'data_mapper'
 require File.join(File.dirname(__FILE__), 'environment')
 
+set :session_secret, ENV["SESSION_KEY"]
+
 enable :sessions
+
+configure do
+  set :views, "#{File.dirname(__FILE__)}/views"
+end
+
+error do
+  e = request.env['sinatra.error']
+  Kernel.puts e.backtrace.join("\n")
+  'Application error'
+end
 
 helpers do
     include Rack::Utils
