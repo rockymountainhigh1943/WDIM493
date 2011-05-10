@@ -70,6 +70,11 @@ get '/account/settings' do
 	erb :settings
 end
 
+### Logout
+get '/logout' do
+	session.clear
+end
+
 ###########################
 ########## Admin ##########
 
