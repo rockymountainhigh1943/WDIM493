@@ -43,7 +43,7 @@ end
 ### Dashboard
 get '/account' do
 	redirect '/' if !@user
-	erb :account
+	erb :account, :locals => { :name => @user.first_name }
 end
 
 ### View User Events
