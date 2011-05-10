@@ -33,8 +33,9 @@ end
 post '/' do
 	user = User.first :username => params[:username]
   	if user and user.password == params[:userpass]
-		session[:user_id] = @user.id
 		@user = user
+		session.clear
+		session[:user_id] = @user.id
 		redirect '/'
 	end
 end
