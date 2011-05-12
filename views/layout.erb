@@ -7,6 +7,15 @@
 <body>
 <div id="container">
 	<img src="/images/logo.png" height="77" width="320" alt="AMC Coordinator - Coordination through Communication" />
+	<% if @user %>
+		<ul id="nav">
+			<li><a href="/account/view">Your Events</a></li>
+			<li><a href="/account/view/all">All Events</a></li>
+			<li><a href="/account/switch">Request Switch</a></li>
+			<li><a href="/account/settings">Edit Settings</a></li>
+			<li><a href="/logout">Sign Out</a></li>
+		</ul>
+	<% end %>
 	<div id="outer-content">
 		<div id="content">
 		<%= yield %>

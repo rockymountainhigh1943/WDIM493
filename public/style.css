@@ -22,6 +22,27 @@ body {
 	padding:15px;
 }
 
+ul#nav {
+	position:absolute;
+	margin-left:330px;
+	margin-top:-24px;
+}
+
+ul#nav li {
+	list-style-type:none;
+	display:inline;
+	margin-right:20px;
+}
+
+ul#nav li a:link, ul#nav li a:visited {
+	color:#61B4CF !important;
+	text-decoration:none;
+}
+
+ul#nav li a:hover {
+	color:#06799F !important;
+}
+
 #content {
 	background:#FFF;
 	min-height:320px;
