@@ -13,4 +13,5 @@ class User
 	property :password,		BCryptHash, :required => true
 	property :is_admin,		Boolean, :default => false
 
+	has n, :UserEvent
 end
