@@ -9,10 +9,10 @@
 	<img src="/images/logo.png" height="77" width="320" alt="AMC Coordinator - Coordination through Communication" />
 	<% if @user %>
 		<ul id="nav">
-			<li><a href="/account/view">Your Events</a></li>
-			<li><a href="/account/view/all">All Events</a></li>
-			<li><a href="/account/switch">Request Switch</a></li>
-			<li><a href="/account/settings">Edit Settings</a></li>
+			<li<% if active == 'view' %> class="active"<% end %>><a href="/account/view">Your Events</a></li>
+			<li<% if active == 'all' %> class="active"<% end %>><a href="/account/view/all">All Events</a></li>
+			<li<% if active == 'switch' %> class="active"<% end %>><a href="/account/switch">Request Switch</a></li>
+			<li<% if active == 'settings' %> class="active"<% end %>><a href="/account/settings">Edit Settings</a></li>
 			<li><a href="/logout">Sign Out</a></li>
 		</ul>
 	<% end %>

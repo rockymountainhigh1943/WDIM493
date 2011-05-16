@@ -43,6 +43,14 @@ ul#nav li a:hover {
 	color:#06799F !important;
 }
 
+ul#nav li.active {
+	border-bottom:2px dotted #ff8300;
+}
+
+ul#nav li.active a:link, ul#nav li.active a:visited {
+	color:#06799F !important;
+}
+
 #content {
 	background:#FFF;
 	min-height:320px;

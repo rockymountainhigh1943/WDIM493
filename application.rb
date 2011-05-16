@@ -43,31 +43,31 @@ end
 ### Dashboard
 get '/account' do
 	redirect '/' if !@user
-	erb :account, :locals => { :name => @user.first_name }
+	erb :account, :locals => { :name => @user.first_name, :active => nil }
 end
 
 ### View User Events
 get '/account/view' do
 	redirect '/' if !@user
-	erb :view
+	erb :view, :locals => { :name => @user.first_name, :active => 'view' }
 end
 
 ### View All Events
 get '/account/view/all' do
 	redirect '/' if !@user
-	erb :viewall
+	erb :viewall, :locals => { :name => @user.first_name, :active => 'all' }
 end
 
 ### Request Switch
 get '/account/switch' do
 	redirect '/' if !@user
-	erb :switch
+	erb :switch, :locals => { :name => @user.first_name, :active => 'switch' }
 end
 
 ### Account Settings
 get '/account/settings' do
 	redirect '/' if !@user
-	erb :settings
+	erb :settings, :locals => { :name => @user.first_name, :active => 'settings' }
 end
 
 ### Logout
