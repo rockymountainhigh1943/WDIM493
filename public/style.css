@@ -130,6 +130,14 @@ img#welcome {
 	margin-top:5px;
 }
 
+form#settings div.item {
+	margin:0 0 15px 15px;
+}
+
+form#settings input#ss {
+	margin-left:15px;
+}
+
 /* ------------- Typograhy ------------- */
 
 #content p, #content ul, #content ol {

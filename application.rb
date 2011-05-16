@@ -70,6 +70,12 @@ get '/account/settings' do
 	erb :settings, :locals => { :name => @user.first_name, :active => 'settings' }
 end
 
+post '/account/settings' do
+	redirect '/' if !@user
+	@user.update( :first_name => params[:first], :last_name => params[:last], :email => params['email'] )
+	redirect '/account/settings' 
+end
+
 ### Logout
 get '/logout' do
 	session.clear
