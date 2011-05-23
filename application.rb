@@ -27,7 +27,7 @@ end
 
 ### Home
 get '/' do
-	erb :main
+	erb :main, :locals => { :active => nil }
 end
 
 post '/' do
