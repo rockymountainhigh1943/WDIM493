@@ -11,6 +11,7 @@ gem 'dm-migrations'
 gem 'dm-postgres-adapter'
 gem 'haml'
 gem 'bcrypt-ruby'
+gem 'dm-mysql-adapter'
 
 group :test do
   gem 'rspec', :require => 'spec'
