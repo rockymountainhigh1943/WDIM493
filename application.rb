@@ -42,31 +42,31 @@ post '/' do
 end
 
 ### Dashboard
-get '/account' do
+get '/account/?' do
 	redirect '/' if !@user
 	erb :account, :locals => { :name => @user.first_name, :active => nil }
 end
 
 ### View User Events
-get '/account/view' do
+get '/account/view/?' do
 	redirect '/' if !@user
 	erb :view, :locals => { :name => @user.first_name, :active => 'view' }
 end
 
 ### View All Events
-get '/account/view/all' do
+get '/account/view/all/?' do
 	redirect '/' if !@user
 	erb :viewall, :locals => { :name => @user.first_name, :active => 'all' }
 end
 
 ### Request Switch
-get '/account/switch' do
+get '/account/switch/?' do
 	redirect '/' if !@user
 	erb :switch, :locals => { :name => @user.first_name, :active => 'switch' }
 end
 
 ### Account Settings
-get '/account/settings' do
+get '/account/settings/?' do
 	redirect '/' if !@user
 	erb :settings, :locals => { :name => @user.first_name, :active => 'settings' }
 end
@@ -78,7 +78,7 @@ post '/account/settings' do
 end
 
 ### Logout
-get '/logout' do
+get '/logout/?' do
 	session.clear
 	redirect '/'
 end
@@ -87,7 +87,7 @@ end
 ########## Admin ##########
 
 ### Admin Add Event
-get '/admin/add' do
+get '/admin/add/?' do
 	redirect '/' if !@user.is_admin
 	erb :add, :locals => { :name => @user.first_name, :active => nil }
 end
