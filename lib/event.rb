@@ -17,5 +17,4 @@ class Event
 	property :have,			Integer
 	property :notes,		Text
 
-	has n, :UserEvent
 end

@@ -27,6 +27,7 @@ end
 
 ### Home
 get '/' do
+	redirect '/account' if @user
 	erb :main, :locals => { :active => nil }
 end
 
@@ -87,6 +88,12 @@ end
 
 ### Admin Add Event
 get '/admin/add' do
-	redirect '/' if !@user
-	erb :add
+	redirect '/' if !@user.is_admin
+	erb :add, :locals => { :name => @user.first_name, :active => nil }
+end
+
+post '/admin/add' do
+	redirect '/' if !@user.is_admin
+	new = Event.first_or_create( :eid => nil, :event_name => 'event_name', :event_month => '5', :event_day => '23', :event_year => '2011', :event_time => 'event_time', :type => 'type', :location => 'location', :needed => '12' )
+	redirect '/admin/add'
 end

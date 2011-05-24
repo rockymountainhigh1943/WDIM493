@@ -116,11 +116,11 @@ img#welcome {
 
 #add-inner div {
 	width:300px;
+	margin-bottom:15px;
 }
 
 #add-inner div input, #add-inner div select {
 	float:right;
-	margin-left:55px;
 }
 
 #footer {
@@ -167,6 +167,12 @@ form#settings input#ss {
 
 h1 {
 	font-size:28px;
+	font-weight:bold;
+	margin-bottom:10px;
+}
+
+h2 {
+	font-size:20px;
 	font-weight:bold;
 	margin-bottom:10px;
 }

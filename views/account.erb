@@ -1,6 +1,6 @@
 <h1>Welcome, <%= name %>!</h1>
 
-<p>Now that we have you here:</p>
+<h2>Dashboard</h2>
 
 <ul>
 	<li><a href="/account/view">View Your Events</a></li>
@@ -8,3 +8,11 @@
 	<li><a href="/account/switch">Request Switch</a></li>
 	<li><a href="/account/settings">Edit Settings</a></li>
 </ul>
+
+<% if @user.is_admin %>
+<h2>Administration</h2>
+	<ul>
+		<li><a href="/admin/add">Add Event</a></li>
+		<li><a href="/admin/view">View Events</a></li>
+	</ul>		
+<% end %>

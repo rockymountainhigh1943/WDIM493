@@ -4,16 +4,25 @@
 
 <div id="add-outer">
 	<div id="add-inner">
-		<form method="post" action="/">
+		<form method="post" action="">
 			<div>
-				Name <input type="text" name="event-name" id="event-name">
+				Name <input type="text" name="event_name" id="event_name">
 			</div>
 			<div>
-				Date <input type="text" name="event-date" id="event-date">
+				Month <input type="text" name="event_month" id="event_month">
+			</div>
+			<div>
+				Day <input type="text" name="event_day" id="event_day">
+			</div>
+			<div>
+				Year <input type="text" name="event_year" id="event_year">
+			</div>
+			<div>
+				Time <input type="text" name="event_time" id="event_time">
 			</div>
 			<div>
 				Type 
-				<select>
+				<select name="type" id="type">
 					<option value="">Select Type</option>
 					<option value="Beer Vending">Beer Vending</option>
 					<option value="Booth">Booth</option>
@@ -22,14 +31,19 @@
 				</select>
 			</div>
 			<div>
-				Time <input type="text" name="event-time" id="event-time">
+				Location 
+				<select name="location" id="location">
+					<option value="">Select Location</option>
+					<option value="Rose Garden">Rose Garden</option>
+					<option value="Coliseum">Coliseum</option>
+				</select>
 			</div>
 			<div>
-				Needed <input type="text" name="event-needed" id="event-needed">
+				Needed <input type="text" name="needed" id="needed">
 			</div>
 			<div>
-				Description
-				<textarea cols="35" rows="5"></textarea>
+				Notes
+				<textarea cols="40" rows="5" name="notes" id="notes"></textarea>
 			</div>
 			<input type="submit" id="submit" value="Add Event!">
 		</form>
