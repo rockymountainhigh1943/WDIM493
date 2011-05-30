@@ -47,28 +47,34 @@ get '/account/?' do
 	erb :account, :locals => { :name => @user.first_name, :active => nil }
 end
 
+### Signup
+get '/account/signup/?' do
+	redirect '/' if !@user
+	erb :signup, :locals => { :active => 'signup' }
+end
+
 ### View User Events
 get '/account/view/?' do
 	redirect '/' if !@user
-	erb :view, :locals => { :name => @user.first_name, :active => 'view' }
+	erb :view, :locals => { :active => 'view' }
 end
 
 ### View All Events
 get '/account/view/all/?' do
 	redirect '/' if !@user
-	erb :viewall, :locals => { :name => @user.first_name, :active => 'all' }
+	erb :viewall, :locals => { :active => 'all' }
 end
 
 ### Request Switch
 get '/account/switch/?' do
 	redirect '/' if !@user
-	erb :switch, :locals => { :name => @user.first_name, :active => 'switch' }
+	erb :switch, :locals => { :active => 'switch' }
 end
 
 ### Account Settings
 get '/account/settings/?' do
 	redirect '/' if !@user
-	erb :settings, :locals => { :name => @user.first_name, :active => 'settings' }
+	erb :settings, :locals => { :active => 'settings' }
 end
 
 post '/account/settings' do
@@ -86,10 +92,15 @@ end
 ###########################
 ########## Admin ##########
 
+get '/admin/?' do
+	redirect '/' if !@user.is_admin
+	erb :admin, :locals => { :active => 'admin' }
+end
+
 ### Admin Add Event
 get '/admin/add/?' do
 	redirect '/' if !@user.is_admin
-	erb :add, :locals => { :name => @user.first_name, :active => nil }
+	erb :add, :locals => { :active => nil }
 end
 
 post '/admin/add' do
