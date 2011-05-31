@@ -10,7 +10,7 @@
 	<% if @user %>
 		<ul id="nav">
 			<li<% if active == 'signup' %> class="active"<% end %>><a href="/account/signup">Sign up!</a></li>
-			<li<% if active == 'view' %> class="active"<% end %>><a href="/account/view">Your Events</a></li>
+			<li<% if active == 'view' %> class="active"<% end %>><a href="/account/view">Your Schedule</a></li>
 			<% if @user.is_admin %><li<% if active == 'admin' %> class="active"<% end %>><a href="/admin">Administration</a></li><% end %>
 			<li<% if active == 'settings' %> class="active"<% end %>><a href="/account/settings">Edit Settings</a></li>
 			<li><a href="/logout">Sign Out</a></li>
