@@ -136,7 +136,7 @@ img#welcome {
 
 form#settings div.item {
 	margin:0 0 15px 15px;
-	width:350px;
+	width:340px;
 }
 
 form#settings div.item input {
@@ -188,6 +188,10 @@ form#settings input#ss {
 
 #content p, #content ul, #content ol {
 	margin-bottom:15px;
+}
+
+#content li {
+	margin-bottom:5px;
 }
 
 #content ul, #content ol {
