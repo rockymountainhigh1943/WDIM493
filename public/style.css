@@ -53,7 +53,7 @@ ul#nav li.active a:link, ul#nav li.active a:visited {
 
 #content {
 	background:#FFF;
-	min-height:320px;
+	min-height:200px;
 	border:1px solid #FFF;
 	-moz-border-radius:10px;
 	-webkit-border-radius:10px;
@@ -70,22 +70,22 @@ img#welcome {
 	width:240px;
 	margin:0 auto;
 	margin-top:25px;
-	/*border:1px solid #61b4cf;
+	border:1px solid #61b4cf;
 	-moz-border-radius:10px;
 	-webkit-border-radius:10px;
-	border-radius:10px;*/
+	border-radius:10px;
 	padding:15px;
-	/*background:#61b4cf;*/
+	background:#61b4cf;
 }
 
 #login-inner {
 	min-height:115px;
 	padding:15px;
 	background:#FFF;
-	/*border:1px solid #61b4cf;
+	border:1px solid #61b4cf;
 	-moz-border-radius:10px;
 	-webkit-border-radius:10px;
-	border-radius:10px;*/
+	border-radius:10px;
 }
 
 #user {
@@ -170,6 +170,15 @@ form#settings input#ss {
 	margin-top:-5px !important;
 	display:none;
 	color:#06799f;
+	font-size:20px;
+	font-weight:bold;
+}
+
+#failed {
+	margin-bottom:10px;
+	margin-top:-5px !important;
+	display:none;
+	color:#cf6161;
 	font-size:20px;
 	font-weight:bold;
 }

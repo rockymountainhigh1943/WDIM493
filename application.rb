@@ -38,6 +38,8 @@ post '/' do
 		session.clear
 		session[:user_id] = @user.id
 		redirect '/account'
+		else
+		redirect '/'
 	end
 end
 
@@ -84,7 +86,18 @@ post '/account/settings' do
 end
 
 get '/account/passchange/?' do
+	redirect '/' if !@user
 	erb :passchange, :locals => { :active => 'settings' }
+end
+
+post '/account/passchange' do
+	redirect '/' if !@user
+		if params[:user] == @user.username and params[:newPass] == params[:againPass]
+			@user.update( :password => params[:newPass] )
+			redirect '/account/passchange?status=changed'
+		else
+			redirect '/account/passchange?status=failed'
+		end
 end
 
 ### Logout
@@ -115,5 +128,6 @@ end
 
 ### Schedule
 get '/admin/schedule/?' do
+	redirect '/' if !@user.is_admin
 	erb :admin_schedule, :locals => { :active => 'admin' }
 end

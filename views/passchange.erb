@@ -8,6 +8,16 @@
 	$('#confirm').show(350).delay(3000).hide(350);
 </script>
 <% end %>
+<% if params['status'] == "failed" %>
+<div id="failed">
+	Failed! - Invalid Username or Passwords Didn't Match
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#failed').show(350).delay(3000).hide(350);
+});
+</script>
+<% end %>
 
 <p>Enter your new account password twice below:</p>
 
@@ -18,11 +28,11 @@
 	</div>
 	<div class='item'>
 		New Password
-		<input type="password" name="newPass" value="" />
+		<input type="password" id="newPass" name="newPass" value="" />
 	</div>
 	<div class='item'>
 		Again
-		<input type="password" name="againPass" value="" />
+		<input type="password" id="againPass" name="againPass" value="" />
 	</div>
 	<input id="ss" type="image" src="/images/submit.jpg" />
 </form>
@@ -30,3 +40,4 @@
 <div id="bottombar">
 	&#60;&#60; <a href="/account/settings">Go Back</a>
 </div>
+
