@@ -80,7 +80,11 @@ end
 post '/account/settings' do
 	redirect '/' if !@user
 	@user.update( :first_name => params[:first], :last_name => params[:last], :email => params['email'] )
-	redirect '/account/settings' 
+	redirect '/account/settings?status=changed' 
+end
+
+get '/account/passchange/?' do
+	erb :passchange, :locals => { :active => 'settings' }
 end
 
 ### Logout
@@ -97,7 +101,7 @@ get '/admin/?' do
 	erb :admin, :locals => { :active => 'admin' }
 end
 
-### Admin Add Event
+### Add Event
 get '/admin/add/?' do
 	redirect '/' if !@user.is_admin
 	erb :add, :locals => { :active => nil }
@@ -107,4 +111,9 @@ post '/admin/add' do
 	redirect '/' if !@user.is_admin
 	new = Event.first_or_create( :eid => nil, :event_name => 'event_name', :event_month => '5', :event_day => '23', :event_year => '2011', :event_time => 'event_time', :type => 'type', :location => 'location', :needed => '12' )
 	redirect '/admin/add'
+end
+
+### Schedule
+get '/admin/schedule/?' do
+	erb :admin_schedule, :locals => { :active => 'admin' }
 end

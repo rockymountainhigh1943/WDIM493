@@ -1,0 +1,32 @@
+<img id="heading" src="/images/change-password.jpg" height="35" width="204" alt="Change Password" />
+
+<% if params['status'] == "changed" %>
+<div id="confirm">
+	Password Changed!
+</div>
+<script type="text/javascript">
+	$('#confirm').show(350).delay(3000).hide(350);
+</script>
+<% end %>
+
+<p>Enter your new account password twice below:</p>
+
+<form id="settings" method="POST" action="/account/passchange">
+	<div class='item'>
+		Username
+		<input type="text" name="user" value="" />
+	</div>
+	<div class='item'>
+		New Password
+		<input type="password" name="newPass" value="" />
+	</div>
+	<div class='item'>
+		Again
+		<input type="password" name="againPass" value="" />
+	</div>
+	<input id="ss" type="image" src="/images/submit.jpg" />
+</form>
+
+<div id="bottombar">
+	&#60;&#60; <a href="/account/settings">Go Back</a>
+</div>

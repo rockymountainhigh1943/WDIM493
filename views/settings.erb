@@ -1,23 +1,32 @@
-<h1>Account Settings</h1>
+<img id="heading" src="/images/account-settings.jpg" height="35" width="201" alt="Account Settings" />
+
+<% if params['status'] == "changed" %>
+<div id="confirm">
+	Settings Updated!
+</div>
+<script type="text/javascript">
+	$('#confirm').show(350).delay(3000).hide(350);
+</script>
+<% end %>
 
 <p>Change account level settings:</p>
 
 <form id="settings" method="POST" action="/account/settings">
 	<div class='item'>
-		<h3>First Name</h3>
+		First Name
 		<input type="text" name="first" value="<%= @user.first_name %>" />
 	</div>
 	<div class='item'>
-		<h3>Last Name</h3>
+		Last Name
 		<input type="text" name="last" value="<%= @user.last_name %>" />
 	</div>
 	<div class='item'>
-		<h3>Email</h3>
+		Email
 		<input type="text" name="email" value="<%= @user.email %>" />
 	</div>
-	<div class='item'>
-		<h3>Password</h3>
-		<input type="text" name="password" />
-	</div>
-	<input id="ss" type="submit" value="Change Settings" />
+	<input id="ss" type="image" src="/images/submit.jpg" />
 </form>
+
+<div id="bottombar">
+	* <a href="/account/passchange">Change Password</a>
+</div>
