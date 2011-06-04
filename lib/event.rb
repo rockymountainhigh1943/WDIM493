@@ -1,20 +1,23 @@
 # Master Event Table Structure
 require 'dm-core'
-require 'dm-types/bcrypt_hash'
 
 class Event
 	include DataMapper::Resource
 	
 	property :eid,			Serial
 	property :event_name,	String, :required => true
-	property :event_month,	Integer, :required => true
 	property :event_day,	Integer, :required => true
-	property :event_year,	Integer, :required => true
+	property :event_day_name,	Integer, :required => true
+	property :event_range	Integer, :required => true
 	property :event_time,	String, :required => true
-	property :type,			String, :required => true
-	property :location,		String, :required => true
-	property :needed,		Integer, :required => true
+	property :type,			Integer, :required => true
+	property :location,		Integer, :required => true
+	property :need,			Integer, :required => true
 	property :have,			Integer
 	property :notes,		Text
 
+	has n, :UserEvent
+	belongs_to :EventType
+	belongs_to :EventLocation
+	belongs_to :EventRange
 end

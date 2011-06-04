@@ -130,23 +130,29 @@ img#welcome {
 	margin-top:5px;
 }
 
-#settings {
+#settings, #add-range {
 	margin-top:20px;
 }
 
-form#settings div.item {
+form#settings div.item, form#add-range div.item {
 	margin:0 0 15px 15px;
 	width:340px;
 }
 
-form#settings div.item input {
+form#settings div.item input, form#add-range div.item input, form#add-range div.item select {
 	float:right;
 	width:200px;
 }
 
-form#settings input#ss {
+form#settings input#ss, form#add-range input#ss {
 	margin-left:15px;
 	margin-top:10px;
+}
+
+#perHelper {
+	position:absolute;
+	margin-left:350px;
+	margin-top:-15px;
 }
 
 #toolbar {

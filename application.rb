@@ -131,3 +131,15 @@ get '/admin/schedule/?' do
 	redirect '/' if !@user.is_admin
 	erb :admin_schedule, :locals => { :active => 'admin' }
 end
+
+### Archives
+get '/admin/archives/?' do
+	redirect '/' if !@user.is_admin
+	erb :admin_archive, :locals => { :active => 'admin' }
+end
+
+### Add Range
+get '/admin/add/range/?' do
+	redirect '/' if !@user.is_admin
+	erb :admin_add_range, :locals => { :active => 'admin' }
+end
