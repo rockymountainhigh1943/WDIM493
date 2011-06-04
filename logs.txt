@@ -1,0 +1,100 @@
+2011-06-04T08:33:11+00:00 app[web.1]: 	from /home/heroku_rack/heroku.ru:23:in `eval'
+2011-06-04T08:33:11+00:00 app[web.1]: 	from /home/heroku_rack/heroku.ru:23:in `block (3 levels) in <main>'
+2011-06-04T08:33:11+00:00 app[web.1]: 	from /app/.bundle/gems/ruby/1.9.1/gems/rack-1.3.0/lib/rack/builder.rb:51:in `instance_eval'
+2011-06-04T08:33:11+00:00 app[web.1]: 	from /app/.bundle/gems/ruby/1.9.1/gems/rack-1.3.0/lib/rack/builder.rb:51:in `initialize'
+2011-06-04T08:33:11+00:00 app[web.1]: 	from /app/.bundle/gems/ruby/1.9.1/gems/rack-1.3.0/lib/rack/builder.rb:120:in `new'
+2011-06-04T08:33:11+00:00 app[web.1]: 	from /app/.bundle/gems/ruby/1.9.1/gems/rack-1.3.0/lib/rack/builder.rb:120:in `map'
+2011-06-04T08:33:11+00:00 app[web.1]: 	from /home/heroku_rack/heroku.ru:18:in `block (2 levels) in <main>'
+2011-06-04T08:33:11+00:00 app[web.1]: 	from /app/.bundle/gems/ruby/1.9.1/gems/rack-1.3.0/lib/rack/builder.rb:51:in `instance_eval'
+2011-06-04T08:33:11+00:00 app[web.1]: 	from /app/.bundle/gems/ruby/1.9.1/gems/rack-1.3.0/lib/rack/builder.rb:51:in `initialize'
+2011-06-04T08:33:11+00:00 app[web.1]: 	from /home/heroku_rack/heroku.ru:11:in `new'
+2011-06-04T08:33:11+00:00 app[web.1]: 	from /home/heroku_rack/heroku.ru:11:in `block in <main>'
+2011-06-04T08:33:11+00:00 app[web.1]: 	from /app/.bundle/gems/ruby/1.9.1/gems/rack-1.3.0/lib/rack/builder.rb:51:in `instance_eval'
+2011-06-04T08:33:11+00:00 heroku[web.1]: Process exited
+2011-06-04T08:33:11+00:00 heroku[web.1]: State changed from starting to crashed
+2011-06-04T08:33:11+00:00 heroku[web.1]: State changed from crashed to created
+2011-06-04T08:33:12+00:00 heroku[web.1]: State changed from created to starting
+2011-06-04T08:33:13+00:00 heroku[web.1]: Starting process with command: `thin -p 19519 -e production -R /home/heroku_rack/heroku.ru start`
+2011-06-04T08:33:15+00:00 app[web.1]: /app/environment.rb:19:in `require': /app/lib/event.rb:11: syntax error, unexpected tCONSTANT, expecting keyword_end (SyntaxError)
+2011-06-04T08:33:15+00:00 app[web.1]: 	property :event_range	Integer, :required => true
+2011-06-04T08:33:15+00:00 app[web.1]: 	                     	       ^
+2011-06-04T08:33:15+00:00 app[web.1]: /app/lib/event.rb:11: syntax error, unexpected tASSOC, expecting tCOLON2 or '[' or '.'
+2011-06-04T08:33:15+00:00 app[web.1]: 	property :event_range	Integer, :required => true
+2011-06-04T08:33:15+00:00 app[web.1]: 	                     	                     ^
+2011-06-04T08:33:15+00:00 app[web.1]: 	from /app/environment.rb:19:in `block (2 levels) in <top (required)>'
+2011-06-04T08:33:15+00:00 app[web.1]: 	from /app/environment.rb:19:in `glob'
+2011-06-04T08:33:15+00:00 app[web.1]: 	from /app/environment.rb:19:in `block in <top (required)>'
+2011-06-04T08:33:15+00:00 app[web.1]: 	from /app/.bundle/gems/ruby/1.9.1/gems/sinatra-1.2.6/lib/sinatra/base.rb:1211:in `configure'
+2011-06-04T08:33:15+00:00 app[web.1]: 	from (__DELEGATE__):3:in `configure'
+2011-06-04T08:33:15+00:00 app[web.1]: 	from /app/environment.rb:16:in `<top (required)>'
+2011-06-04T08:33:15+00:00 app[web.1]: 	from /app/application.rb:5:in `require'
+2011-06-04T08:33:15+00:00 app[web.1]: 	from /app/application.rb:5:in `<top (required)>'
+2011-06-04T08:33:15+00:00 app[web.1]: 	from <internal:lib/rubygems/custom_require>:29:in `require'
+2011-06-04T08:33:15+00:00 app[web.1]: 	from <internal:lib/rubygems/custom_require>:29:in `require'
+2011-06-04T08:33:15+00:00 app[web.1]: 	from config.ru:1:in `block (3 levels) in <main>'
+2011-06-04T08:33:15+00:00 app[web.1]: 	from /home/heroku_rack/heroku.ru:23:in `eval'
+2011-06-04T08:33:15+00:00 app[web.1]: 	from /home/heroku_rack/heroku.ru:23:in `block (3 levels) in <main>'
+2011-06-04T08:33:15+00:00 app[web.1]: 	from /app/.bundle/gems/ruby/1.9.1/gems/rack-1.3.0/lib/rack/builder.rb:51:in `instance_eval'
+2011-06-04T08:33:15+00:00 app[web.1]: 	from /app/.bundle/gems/ruby/1.9.1/gems/rack-1.3.0/lib/rack/builder.rb:51:in `initialize'
+2011-06-04T08:33:15+00:00 app[web.1]: 	from /app/.bundle/gems/ruby/1.9.1/gems/rack-1.3.0/lib/rack/builder.rb:120:in `new'
+2011-06-04T08:33:15+00:00 app[web.1]: 	from /app/.bundle/gems/ruby/1.9.1/gems/rack-1.3.0/lib/rack/builder.rb:120:in `map'
+2011-06-04T08:33:15+00:00 app[web.1]: 	from /home/heroku_rack/heroku.ru:18:in `block (2 levels) in <main>'
+2011-06-04T08:33:15+00:00 app[web.1]: 	from /app/.bundle/gems/ruby/1.9.1/gems/rack-1.3.0/lib/rack/builder.rb:51:in `instance_eval'
+2011-06-04T08:33:15+00:00 app[web.1]: 	from /app/.bundle/gems/ruby/1.9.1/gems/rack-1.3.0/lib/rack/builder.rb:51:in `initialize'
+2011-06-04T08:33:15+00:00 app[web.1]: 	from /home/heroku_rack/heroku.ru:11:in `new'
+2011-06-04T08:33:15+00:00 app[web.1]: 	from /home/heroku_rack/heroku.ru:11:in `block in <main>'
+2011-06-04T08:33:15+00:00 app[web.1]: 	from /app/.bundle/gems/ruby/1.9.1/gems/rack-1.3.0/lib/rack/builder.rb:51:in `instance_eval'
+2011-06-04T08:33:15+00:00 app[web.1]: 	from /app/.bundle/gems/ruby/1.9.1/gems/rack-1.3.0/lib/rack/builder.rb:51:in `initialize'
+2011-06-04T08:33:15+00:00 app[web.1]: 	from /home/heroku_rack/heroku.ru:1:in `new'
+2011-06-04T08:33:15+00:00 app[web.1]: 	from /usr/ruby1.9.2/lib/ruby/gems/1.9.1/gems/thin-1.2.6/lib/rack/adapter/loader.rb:36:in `eval'
+2011-06-04T08:33:15+00:00 app[web.1]: 	from /home/heroku_rack/heroku.ru:1:in `<main>'
+2011-06-04T08:33:15+00:00 app[web.1]: 	from /usr/ruby1.9.2/lib/ruby/gems/1.9.1/gems/thin-1.2.6/lib/rack/adapter/loader.rb:36:in `load'
+2011-06-04T08:33:15+00:00 app[web.1]: 	from /usr/ruby1.9.2/lib/ruby/gems/1.9.1/gems/thin-1.2.6/lib/thin/controllers/controller.rb:175:in `load_rackup_config'
+2011-06-04T08:33:15+00:00 app[web.1]: 	from /usr/ruby1.9.2/lib/ruby/gems/1.9.1/gems/thin-1.2.6/lib/thin/controllers/controller.rb:65:in `start'
+2011-06-04T08:33:15+00:00 app[web.1]: 	from /usr/ruby1.9.2/lib/ruby/gems/1.9.1/gems/thin-1.2.6/lib/thin/runner.rb:177:in `run_command'
+2011-06-04T08:33:15+00:00 app[web.1]: 	from /usr/ruby1.9.2/lib/ruby/gems/1.9.1/gems/thin-1.2.6/lib/thin/runner.rb:143:in `run!'
+2011-06-04T08:33:15+00:00 app[web.1]: 	from /usr/ruby1.9.2/lib/ruby/gems/1.9.1/gems/thin-1.2.6/bin/thin:6:in `<top (required)>'
+2011-06-04T08:33:15+00:00 app[web.1]: 	from /usr/ruby1.9.2/bin/thin:19:in `load'
+2011-06-04T08:33:15+00:00 app[web.1]: 	from /usr/ruby1.9.2/bin/thin:19:in `<main>'
+2011-06-04T08:33:15+00:00 heroku[web.1]: Process exited
+2011-06-04T08:33:16+00:00 heroku[web.1]: State changed from starting to crashed
+2011-06-04T08:33:17+00:00 heroku[router]: Error H10 (App crashed) -> GET freezing-leaf-974.heroku.com/ dyno=none queue=0 wait=0ms service=0ms bytes=0
+2011-06-04T01:33:18-07:00 heroku[nginx]: GET / HTTP/1.1 | 71.236.187.136 | 796 | http | 503
+2011-06-04T08:33:36+00:00 heroku[router]: Error H10 (App crashed) -> GET freezing-leaf-974.heroku.com/ dyno=none queue=0 wait=0ms service=0ms bytes=0
+2011-06-04T01:39:00-07:00 heroku[slugc]: Slug compilation started
+2011-06-04T08:39:04+00:00 heroku[api]: Deploy a60af68 by rockymountainhigh1943@gmail.com
+2011-06-04T08:39:04+00:00 heroku[api]: Release v97 created by rockymountainhigh1943@gmail.com
+2011-06-04T08:39:04+00:00 heroku[web.1]: State changed from crashed to created
+2011-06-04T08:39:04+00:00 heroku[web.1]: State changed from created to starting
+2011-06-04T01:39:05-07:00 heroku[slugc]: Slug compilation finished
+2011-06-04T08:39:07+00:00 heroku[web.1]: Starting process with command: `thin -p 45806 -e production -R /home/heroku_rack/heroku.ru start`
+2011-06-04T08:39:09+00:00 app[web.1]: DataObjects::URI.new with arguments is deprecated, use a Hash of URI components (/app/.bundle/gems/ruby/1.9.1/gems/dm-do-adapter-1.1.0/lib/dm-do-adapter/adapter.rb:231:in `new')
+2011-06-04T08:39:10+00:00 heroku[web.1]: State changed from starting to up
+2011-06-04T08:39:11+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/ dyno=web.1 queue=0 wait=0ms service=57ms bytes=215
+2011-06-04T08:39:14+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/ dyno=web.1 queue=0 wait=0ms service=1ms bytes=17
+2011-06-04T01:39:15-07:00 heroku[nginx]: GET / HTTP/1.1 | 71.236.187.136 | 245 | http | 500
+2011-06-04T08:39:17+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/ dyno=web.1 queue=0 wait=0ms service=1ms bytes=215
+2011-06-04T08:40:15+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/account dyno=web.1 queue=0 wait=0ms service=4ms bytes=17
+2011-06-04T08:40:20+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/ dyno=web.1 queue=0 wait=0ms service=1ms bytes=215
+2011-06-04T01:40:21-07:00 heroku[nginx]: GET / HTTP/1.1 | 71.236.187.136 | 245 | http | 500
+2011-06-04T01:42:30-07:00 heroku[slugc]: Slug compilation started
+2011-06-04T08:42:34+00:00 heroku[api]: Deploy e84221d by rockymountainhigh1943@gmail.com
+2011-06-04T08:42:34+00:00 heroku[api]: Release v98 created by rockymountainhigh1943@gmail.com
+2011-06-04T08:42:34+00:00 heroku[web.1]: State changed from up to bouncing
+2011-06-04T08:42:34+00:00 heroku[web.1]: State changed from created to starting
+2011-06-04T01:42:35-07:00 heroku[slugc]: Slug compilation finished
+2011-06-04T08:42:38+00:00 heroku[web.1]: Starting process with command: `thin -p 59468 -e production -R /home/heroku_rack/heroku.ru start`
+2011-06-04T08:42:39+00:00 app[web.1]: /app/environment.rb:19:in `require': /app/lib/event.rb:11: syntax error, unexpected tCONSTANT, expecting keyword_end (SyntaxError)
+2011-06-04T08:42:39+00:00 app[web.1]: 	property :event_range	Integer, :required => true
+2011-06-04T08:42:39+00:00 app[web.1]: 	                     	       ^
+2011-06-04T08:42:39+00:00 app[web.1]: /app/lib/event.rb:11: syntax error, unexpected tASSOC, expecting tCOLON2 or '[' or '.'
+2011-06-04T08:42:39+00:00 app[web.1]: 	property :event_range	Integer, :required => true
+2011-06-04T08:42:39+00:00 app[web.1]: 	                     	                     ^
+2011-06-04T08:42:39+00:00 app[web.1]: 	from /app/environment.rb:19:in `block (2 levels) in <top (required)>'
+2011-06-04T08:42:39+00:00 app[web.1]: 	from /app/environment.rb:19:in `glob'
+2011-06-04T08:42:39+00:00 heroku[web.1]: Process exited
+2011-06-04T08:42:40+00:00 heroku[web.1]: State changed from starting to crashed
+2011-06-04T08:42:40+00:00 heroku[router]: Error H10 (App crashed) -> GET freezing-leaf-974.heroku.com/ dyno=none queue=0 wait=0ms service=0ms bytes=0
+2011-06-04T01:42:41-07:00 heroku[nginx]: GET / HTTP/1.1 | 71.236.187.136 | 796 | http | 503
+2011-06-04T08:42:45+00:00 heroku[router]: Error H10 (App crashed) -> GET freezing-leaf-974.heroku.com/accout dyno= queue= wait= service= bytes=
+2011-06-04T01:42:46-07:00 heroku[nginx]: GET /accout HTTP/1.1 | 71.236.187.136 | 795 | http | 503
