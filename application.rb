@@ -143,3 +143,9 @@ get '/admin/add/range/?' do
 	redirect '/' if !@user.is_admin
 	erb :admin_add_range, :locals => { :active => 'admin' }
 end
+
+post '/admin/add/range' do
+	redirect '/' if !@user.is_admin
+	newRange = EventRange.first_or_create( :erid => nil, :month => params['month'], :year => params['year'], :per_user => params['perUser'], :active => '1' )
+	redirect '/admin/schedule'
+end
