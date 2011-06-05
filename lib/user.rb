@@ -12,6 +12,4 @@ class User
 	property :username,		String, :required => true, :unique_index => true
 	property :password,		BCryptHash, :required => true
 	property :is_admin,		Boolean, :default => false
-
-	has n, :UserEvent
 end

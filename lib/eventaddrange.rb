@@ -9,6 +9,4 @@ class EventRange
 	property :year,		Integer
 	property :per_user,	Integer
 	property :active,	Integer
-	
-	has n, :Event
 end

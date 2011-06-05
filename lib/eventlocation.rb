@@ -6,6 +6,4 @@ class EventLocation
 	
 	property :elid, 	Serial
 	property :name,		String
-	
-	has n, :Event
 end

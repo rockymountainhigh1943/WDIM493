@@ -15,9 +15,4 @@ class Event
 	property :need,			Integer, :required => true
 	property :have,			Integer
 	property :notes,		Text
-
-	has n, :UserEvent
-	belongs_to :EventType
-	belongs_to :EventLocation
-	belongs_to :EventRange
 end

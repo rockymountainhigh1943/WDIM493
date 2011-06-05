@@ -6,6 +6,4 @@ class EventType
 	
 	property :etid, 	Serial
 	property :name,		String
-	
-	has n, :Event
 end
