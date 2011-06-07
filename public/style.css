@@ -250,5 +250,23 @@ img#heading {
 	display:block;
 }
 
+.inactive {
+	color:#D0EAF2 !important;
+}
+
+.inactive a:link, .inactive a:visited {
+	color:#D0EAF2 !important;
+}
+
+.redLink a:link, .redLink a:visited {
+	color:#CF6161 !important;
+}
+
+#monthTitle {
+	font-size:24px;
+	color:#06799f;
+	margin-top:-20px;
+	margin-bottom:15px;
+}
 
 /* ----------- END Typograhy ----------- */

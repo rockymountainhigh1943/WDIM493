@@ -7,7 +7,7 @@
 <table border="0" id="scheduleBox" width="100%">
 	<% @ranges.each do |range| %>
 		<tr>
-			<td class="rangeMY"><a href="">
+			<td class="rangeMY"><a href="/admin/schedule/monthly/<%= range.erid %>">
 			<% if range.month == 1 %>January<% end %>
 			<% if range.month == 2 %>February<% end %>
 			<% if range.month == 3 %>March<% end %>
@@ -24,7 +24,7 @@
 			<td class="rangeED blueLink"><a href="/admin/edit/range/<%= range.erid %>">Edit</a> | <a href="/admin/delete/range/<%= range.erid %>">Delete</a></td>
 			<td class="rangeAdd blueLink"><a href="">Add Event</a></td>
 			<td class="rangeEvents">Events: 0</td>
-			<td class="rangeStatus greenLink">Status: <a href="">Active</a></td>
+			<td class="rangeStatus greenLink">Status: <a href="/admin/archive/range/<%= range.erid %>">Active</a></td>
 		</tr>
 	<% end %>
 </table>

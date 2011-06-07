@@ -4,4 +4,27 @@
 
 <img id="heading" src="/images/archives.jpg" height="28" width="100" alt="Archives" />
 
-<p>Some text here</p>
+<table border="0" id="scheduleBox" width="100%">
+	<% @archives.each do |range| %>
+		<tr>
+			<td class="rangeMY"><a href="">
+			<% if range.month == 1 %>January<% end %>
+			<% if range.month == 2 %>February<% end %>
+			<% if range.month == 3 %>March<% end %>
+			<% if range.month == 4 %>April<% end %>
+			<% if range.month == 5 %>May<% end %>
+			<% if range.month == 6 %>June<% end %>
+			<% if range.month == 7 %>July<% end %>
+			<% if range.month == 8 %>August<% end %>
+			<% if range.month == 9 %>September<% end %>
+			<% if range.month == 10 %>October<% end %>
+			<% if range.month == 11 %>November<% end %>
+			<% if range.month == 12 %>December<% end %>
+			 <%= range.year %></a></td>
+			<td class="rangeED inactive"><a href="#">Edit</a> | <a href="#">Delete</a></td>
+			<td class="rangeAdd inactive"><a href="#">Add Event</a></td>
+			<td class="rangeEvents">Events: 0</td>
+			<td class="rangeStatus redLink">Status: <a href="/admin/activate/range/<%= range.erid %>">Archived</a></td>
+		</tr>
+	<% end %>
+</table>

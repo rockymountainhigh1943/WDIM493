@@ -1,0 +1,42 @@
+<div id="toolbar">
+	<a href="#">Add Event</a> | <a href="/admin/schedule">Back to Schedule</a>
+</div>
+
+<img id="heading" src="/images/monthly-schedule.jpg" height="34" width="206" alt="Monthly Schedule" />
+<div id="monthTitle">
+<% if @month.month == 1 %>January<% end %>
+<% if @month.month == 2 %>February<% end %>
+<% if @month.month == 3 %>March<% end %>
+<% if @month.month == 4 %>April<% end %>
+<% if @month.month == 5 %>May<% end %>
+<% if @month.month == 6 %>June<% end %>
+<% if @month.month == 7 %>July<% end %>
+<% if @month.month == 8 %>August<% end %>
+<% if @month.month == 9 %>September<% end %>
+<% if @month.month == 10 %>October<% end %>
+<% if @month.month == 11 %>November<% end %>
+<% if @month.month == 12 %>December<% end %> <%= @month.year %>
+</div>
+
+<table border="0" id="scheduleBox" width="100%">
+	<% @events.each do |event| %>
+		<tr>
+			<td><%= event.event_day_name %> 
+			<% if @month.month == 1 %>January<% end %>
+			<% if @month.month == 2 %>February<% end %>
+			<% if @month.month == 3 %>March<% end %>
+			<% if @month.month == 4 %>April<% end %>
+			<% if @month.month == 5 %>May<% end %>
+			<% if @month.month == 6 %>June<% end %>
+			<% if @month.month == 7 %>July<% end %>
+			<% if @month.month == 8 %>August<% end %>
+			<% if @month.month == 9 %>September<% end %>
+			<% if @month.month == 10 %>October<% end %>
+			<% if @month.month == 11 %>November<% end %>
+			<% if @month.month == 12 %>December<% end %>
+			 <%= event.event_day %></td>
+			 <td><%= event.event_name %>: <%= event.type %></td>
+			 <td></td>
+		</tr>
+	<% end %>
+</table>

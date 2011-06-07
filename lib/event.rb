@@ -7,7 +7,7 @@ class Event
 	property :eid,			Serial
 	property :event_name,	String, :required => true
 	property :event_day,	Integer, :required => true
-	property :event_day_name,	Integer, :required => true
+	property :event_day_name,	String, :required => true
 	property :event_range,	Integer, :required => true
 	property :event_time,	String, :required => true
 	property :type,			Integer, :required => true

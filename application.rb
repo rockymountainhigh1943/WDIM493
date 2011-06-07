@@ -129,13 +129,14 @@ end
 ### Schedule
 get '/admin/schedule/?' do
 	redirect '/' if !@user.is_admin
-	@ranges = EventRange.all
+	@ranges = EventRange.all(:active => 1)
 	erb :admin_schedule, :locals => { :active => 'admin' }
 end
 
 ### Archives
 get '/admin/archives/?' do
 	redirect '/' if !@user.is_admin
+	@archives = EventRange.all(:active => 0)
 	erb :admin_archive, :locals => { :active => 'admin' }
 end
 
@@ -175,4 +176,34 @@ get '/admin/delete/range/:range' do |range|
 		deleteRange.destroy
 	end
 	redirect '/admin/schedule'
+end
+
+### Archive Range 
+get '/admin/archive/range/:range' do |range|
+	redirect '/' if !@user.is_admin
+	archiveRange = EventRange.first(:erid => params['range'])
+	if archiveRange
+		archiveRange.update(:active => 0)
+	end
+	redirect '/admin/schedule'
+end
+
+### Activate Range 
+get '/admin/activate/range/:range' do |range|
+	redirect '/' if !@user.is_admin
+	activateRange = EventRange.first(:erid => params['range'])
+	if activateRange
+		activateRange.update(:active => 1)
+	end
+	redirect '/admin/schedule'
+end
+
+### Monthly View
+get '/admin/schedule/monthly/:range' do |range|
+	redirect '/' if !@user.is_admin
+	@month = EventRange.first(:erid => params['range'])
+	@events = Event.all(:event_range => params['range'])
+	#@types = EventType.first(:etid => @events.type)
+	#@locations = EventLocation.first(:elid => @events.location)
+	erb :admin_monthly, :locals => { :active => 'admin' }
 end
