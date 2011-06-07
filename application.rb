@@ -160,9 +160,19 @@ end
 
 post '/admin/edit/range' do
 	redirect '/' if !@user.is_admin
-	update1 = EventRange.first(:erid => params['erid'])
-	if update1
-		update1.update( :month => params['month'], :year => params['year'], :per_user => params['perUser'] )
+	updateRange = EventRange.first(:erid => params['erid'])
+	if updateRange
+		updateRange.update( :month => params['month'], :year => params['year'], :per_user => params['perUser'] )
+	end
+	redirect '/admin/schedule'
+end
+
+### Delete Range
+get '/admin/delete/range/:range' do |range|
+	redirect '/' if !@user.is_admin
+	deleteRange = EventRange.first(:erid => params['range'])
+	if deleteRange
+		deleteRange.destroy
 	end
 	redirect '/admin/schedule'
 end
