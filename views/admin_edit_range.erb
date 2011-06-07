@@ -1,0 +1,33 @@
+<img id="heading" src="/images/edit-range.jpg" height="35" width="182" alt="Edit Date Range" />
+
+<p>Edit date range below:</p>
+
+<form id="add-range" method="POST" action="/admin/edit/range">
+	<input type="hidden" name="erid" value="<%= @whichRange.erid %>" />
+	<div class='item'>
+		Month
+		<select name="month" id="month">
+			<option value="1" <% if @whichRange.month == 1 %>selected = "selected"<% end %>>Januaray</option>
+			<option value="2" <% if @whichRange.month == 2 %>selected = "selected"<% end %>>February</option>
+			<option value="3" <% if @whichRange.month == 3 %>selected = "selected"<% end %>>March</option>
+			<option value="4" <% if @whichRange.month == 4 %>selected = "selected"<% end %>>April</option>
+			<option value="5" <% if @whichRange.month == 5 %>selected = "selected"<% end %>>May</option>
+			<option value="6" <% if @whichRange.month == 6 %>selected = "selected"<% end %>>June</option>
+			<option value="7" <% if @whichRange.month == 7 %>selected = "selected"<% end %>>July</option>
+			<option value="8" <% if @whichRange.month == 8 %>selected = "selected"<% end %>>August</option>
+			<option value="9" <% if @whichRange.month == 9 %>selected = "selected"<% end %>>September</option>
+			<option value="10" <% if @whichRange.month == 10 %>selected = "selected"<% end %>>October</option>
+			<option value="11" <% if @whichRange.month == 11 %>selected = "selected"<% end %>>November</option>
+			<option value="12" <% if @whichRange.month == 12 %>selected = "selected"<% end %>>December</option>
+		</select>
+	</div>
+	<div class='item'>
+		Year
+		<input type="text" name="year" value="<%= @whichRange.year %>" />
+	</div>
+	<div class='item'>
+		Per User
+		<input type="text" name="perUser" value="<%= @whichRange.per_user %>" /> <div id="perHelper">*how many events should each user sign up for?</div>
+	</div>
+	<input id="ss" type="image" src="/images/submit.jpg" />
+</form>

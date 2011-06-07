@@ -129,6 +129,7 @@ end
 ### Schedule
 get '/admin/schedule/?' do
 	redirect '/' if !@user.is_admin
+	@ranges = EventRange.all
 	erb :admin_schedule, :locals => { :active => 'admin' }
 end
 
@@ -147,5 +148,21 @@ end
 post '/admin/add/range' do
 	redirect '/' if !@user.is_admin
 	newRange = EventRange.first_or_create( :erid => nil, :month => params['month'], :year => params['year'], :per_user => params['perUser'], :active => '1' )
+	redirect '/admin/schedule'
+end
+
+### Edit Range/
+get '/admin/edit/range/:range' do |range|
+	redirect '/' if !@user.is_admin
+	@whichRange = EventRange.first(:erid => params['range'])
+	erb :admin_edit_range, :locals => { :active => 'admin' }
+end
+
+post '/admin/edit/range' do
+	redirect '/' if !@user.is_admin
+	update1 = EventRange.first(:erid => params['erid'])
+	if update1
+		update1.update( :month => params['month'], :year => params['year'], :per_user => params['perUser'] )
+	end
 	redirect '/admin/schedule'
 end

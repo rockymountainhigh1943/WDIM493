@@ -168,8 +168,16 @@ form#settings input#ss, form#add-range input#ss {
 	font-size:12px;
 }
 
-#toolbar a:link, #toolbar a:visited, #bottombar a:link, #bottombar a:visited {
+#toolbar a:link, #toolbar a:visited, #bottombar a:link, #bottombar a:visited, .blueLink a:link, .blueLink a:visited {
 	color:#61b4cf !important;
+}
+
+.blueLink {
+	color:#61b4cf;
+}
+
+.greenLink a:link, .greenLink a:visited {
+	color:#66cf61 !important;
 }
 
 #confirm {
@@ -188,6 +196,10 @@ form#settings input#ss, form#add-range input#ss {
 	color:#cf6161;
 	font-size:20px;
 	font-weight:bold;
+}
+
+table#scheduleBox tr td {
+	padding-bottom:10px;
 }
 
 /* ------------- Typograhy ------------- */
