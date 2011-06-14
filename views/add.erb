@@ -10,7 +10,7 @@
 	<% if @eventRange.month == 9 %>September<% end %>
 	<% if @eventRange.month == 10 %>October<% end %>
 	<% if @eventRange.month == 11 %>November<% end %>
-	<% if @eventRange.month == 12 %>December<% end %> <%= @eventRange.year %></a> | <a href="/admin/schedule">Schedule</a>
+	<% if @eventRange.month == 12 %>December<% end %> <%= @eventRange.year %></a> | <a href="/admin/schedule">Back to Schedule</a>
 </div>
 
 <img id="heading" src="/images/new-event.jpg" height="27" width="121" alt="New Event" />
@@ -34,7 +34,7 @@
 
 <div id="add-outer">
 	<div id="add-inner">
-		<form method="post" action="">
+		<form method="post" action="/admin/add/event/r/<%= @eventRange.erid %>">
 			<input type="hidden" name="event_range_id" id="event_range_id" value="<%= @eventRange.erid %>">
 			<div>
 				Name <input type="text" name="event_name" id="event_name">
@@ -75,7 +75,7 @@
 				Notes
 				<textarea cols="40" rows="5" name="notes" id="notes"></textarea>
 			</div>
-			<input type="submit" id="submit" value="Add Event!">
+			<input type="image" src="/images/add-event.jpg" id="ss">
 		</form>
 	</div>
 </div>
