@@ -35,6 +35,7 @@
 <div id="add-outer">
 	<div id="add-inner">
 		<form method="post" action="">
+			<input type="hidden" name="event_range_id" id="event_range_id" value="<%= @eventRange.erid %>">
 			<div>
 				Name <input type="text" name="event_name" id="event_name">
 			</div>
@@ -66,7 +67,7 @@
 				</select>
 			</div>
 			<div>
-				Needed <input type="text" name="needed" id="needed">
+				Need <input type="text" name="need" id="need">
 			</div>
 			<div>
 				Notes
