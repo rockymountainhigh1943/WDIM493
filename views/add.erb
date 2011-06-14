@@ -52,18 +52,20 @@
 				Type 
 				<select name="type" id="type">
 					<option value="">Select Type</option>
-					<option value="Beer Vending">Beer Vending</option>
-					<option value="Booth">Booth</option>
-					<option value="Pearlick">Pearlick</option>
-					<option value="Other">Other</option>
+					<% types = EventType.all;
+					   types.each do |types| %>
+							<option value="<%= types.etid %>"><%= types.name %></option>
+					<% end %>
 				</select>
 			</div>
 			<div>
 				Location 
 				<select name="location" id="location">
 					<option value="">Select Location</option>
-					<option value="Rose Garden">Rose Garden</option>
-					<option value="Coliseum">Coliseum</option>
+					<% locations = EventLocation.all;
+					   locations.each do |location| %>
+					   		<option value="<%= location.elid %>"><%= location.name %></option>
+					   <% end %>
 				</select>
 			</div>
 			<div>
