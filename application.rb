@@ -124,7 +124,7 @@ end
 post '/admin/add/event/r/:range' do
 	redirect '/' if !@user.is_admin
 	new = Event.first_or_create( :eid => nil, :event_name => params['event_name'], :event_day_name => params['event_day_name'], :event_day => params['event_day'], :event_range => params['event_range_id'], :event_time => params['event_time'], :type => params['type'], :location => params['location'], :need => params['need'], :notes => params['notes'] )
-	redirect '/admin/schedule/monthly/'+params['event_range_id']
+	redirect '/admin/schedule'
 end
 
 ### Schedule
