@@ -1,4 +1,34 @@
-<h1>New Event</h1>
+<div id="toolbar">
+	<a href="/admin/schedule/monthly/<%= @eventRange.erid %>"><% if @eventRange.month == 1 %>January<% end %>
+	<% if @eventRange.month == 2 %>February<% end %>
+	<% if @eventRange.month == 3 %>March<% end %>
+	<% if @eventRange.month == 4 %>April<% end %>
+	<% if @eventRange.month == 5 %>May<% end %>
+	<% if @eventRange.month == 6 %>June<% end %>
+	<% if @eventRange.month == 7 %>July<% end %>
+	<% if @eventRange.month == 8 %>August<% end %>
+	<% if @eventRange.month == 9 %>September<% end %>
+	<% if @eventRange.month == 10 %>October<% end %>
+	<% if @eventRange.month == 11 %>November<% end %>
+	<% if @eventRange.month == 12 %>December<% end %> <%= @eventRange.year %></a> | <a href="/admin/schedule">Schedule</a>
+</div>
+
+<img id="heading" src="/images/new-event.jpg" height="27" width="121" alt="New Event" />
+
+<div id="monthTitle2">
+	<% if @eventRange.month == 1 %>January<% end %>
+	<% if @eventRange.month == 2 %>February<% end %>
+	<% if @eventRange.month == 3 %>March<% end %>
+	<% if @eventRange.month == 4 %>April<% end %>
+	<% if @eventRange.month == 5 %>May<% end %>
+	<% if @eventRange.month == 6 %>June<% end %>
+	<% if @eventRange.month == 7 %>July<% end %>
+	<% if @eventRange.month == 8 %>August<% end %>
+	<% if @eventRange.month == 9 %>September<% end %>
+	<% if @eventRange.month == 10 %>October<% end %>
+	<% if @eventRange.month == 11 %>November<% end %>
+	<% if @eventRange.month == 12 %>December<% end %> <%= @eventRange.year %>
+</div>
 
 <p>Enter event details below:</p>
 
@@ -9,13 +39,10 @@
 				Name <input type="text" name="event_name" id="event_name">
 			</div>
 			<div>
-				Month <input type="text" name="event_month" id="event_month">
-			</div>
-			<div>
 				Day <input type="text" name="event_day" id="event_day">
 			</div>
 			<div>
-				Year <input type="text" name="event_year" id="event_year">
+				Day Name <input type="text" name="event_day_name" id="event_day_name">
 			</div>
 			<div>
 				Time <input type="text" name="event_time" id="event_time">

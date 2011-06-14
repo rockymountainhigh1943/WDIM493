@@ -115,12 +115,13 @@ get '/admin/?' do
 end
 
 ### Add Event
-get '/admin/add/?' do
+get '/admin/add/event/r/:range?' do |range|
 	redirect '/' if !@user.is_admin
-	erb :add, :locals => { :active => nil }
+	@eventRange = EventRange.first(:erid => params['range']);
+	erb :add, :locals => { :active => 'admin' }
 end
 
-post '/admin/add' do
+post '/admin/add/event' do
 	redirect '/' if !@user.is_admin
 	new = Event.first_or_create( :eid => nil, :event_name => 'event_name', :event_month => '5', :event_day => '23', :event_year => '2011', :event_time => 'event_time', :type => 'type', :location => 'location', :needed => '12' )
 	redirect '/admin/add'
