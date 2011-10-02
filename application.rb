@@ -44,6 +44,7 @@ post '/' do
 end
 
 ### Dashboard
+
 get '/account/?' do
 	redirect '/' if !@user
 	erb :account, :locals => { :name => @user.first_name, :active => nil }
@@ -127,6 +128,21 @@ post '/admin/add/event/r' do
 	redirect '/admin/schedule/monthly/'+params['event_range_id']
 end
 
+
+
+### Delete Event
+get '/admin/delete/event/:delete' do |event|
+	redirect '/' if !@user.is_admin
+	splitArgs = params['delete'].split('-')
+	deleteEvent = Event.first(:eid => splitArgs[0])
+	if deleteEvent
+		deleteEvent.destroy
+	end
+	redirect '/admin/schedule/monthly/'+splitArgs[1]
+end
+
+
+
 ### Schedule
 get '/admin/schedule/?' do
 	redirect '/' if !@user.is_admin
@@ -144,6 +160,7 @@ end
 ### Add Range
 get '/admin/add/range/?' do
 	redirect '/' if !@user.is_admin
+	@Time = Time.new
 	erb :admin_add_range, :locals => { :active => 'admin' }
 end
 
@@ -204,7 +221,7 @@ get '/admin/schedule/monthly/:range' do |range|
 	redirect '/' if !@user.is_admin
 	@month = EventRange.first(:erid => params['range'])
 	@events = Event.all(:event_range => params['range'])
-	#@types = EventType.first(:etid => @events.type)
+	#@types = EventType.get(3)
 	#@locations = EventLocation.first(:elid => @events.location)
 	erb :admin_monthly, :locals => { :active => 'admin' }
 end

@@ -21,7 +21,7 @@
 <table border="0" id="scheduleBox" width="100%">
 	<% @events.each do |event| %>
 		<tr>
-			<td><%= event.event_day_name %> 
+			<td><a href=""><%= event.event_day_name %> 
 			<% if @month.month == 1 %>January<% end %>
 			<% if @month.month == 2 %>February<% end %>
 			<% if @month.month == 3 %>March<% end %>
@@ -34,9 +34,12 @@
 			<% if @month.month == 10 %>October<% end %>
 			<% if @month.month == 11 %>November<% end %>
 			<% if @month.month == 12 %>December<% end %>
-			 <%= event.event_day %></td>
-			 <td><%= event.event_name %>: <%= event.type %></td>
-			 <td></td>
+			 <%= event.event_day %></a></td>
+			 <td><%= event.event_name %>: <% if event.type == 1 %>Beer Vending<% end %><% if event.type == 2 %>Booth<% end %><% if event.type == 3 %>Perlick<% end %></td>
+			 <td class="blueLink"><a href="">Edit</a> | <a href="/admin/delete/event/<%= event.eid %>-<%= @month.erid %>">Delete</a></td>
+			 <td>Need: <%= event.need %></td>
+			 <td>Have: <%= event.have %></td>
+			 <td>Status: <% if event.need == event.have %>Full<% else %><span class="red">Not Set</a><% end %></td>
 		</tr>
 	<% end %>
 </table>
