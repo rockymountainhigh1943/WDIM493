@@ -23,7 +23,10 @@
 			 <%= range.year %></a></td>
 			<td class="rangeED inactive"><a href="#">Edit</a> | <a href="#">Delete</a></td>
 			<td class="rangeAdd inactive"><a href="#">Add Event</a></td>
-			<td class="rangeEvents">Events: 0</td>
+			<td class="rangeEvents">Events:
+				<% e_count = Event.all(:event_range => range.erid) %>
+				<%= e_count.count %>
+			</td>
 			<td class="rangeStatus redLink">Status: <a href="/admin/activate/range/<%= range.erid %>">Archived</a></td>
 		</tr>
 	<% end %>

@@ -180,6 +180,10 @@ form#settings input#ss, form#add-range input#ss {
 	color:#66cf61 !important;
 }
 
+.greenLink {
+	color:#66cf61 !important;
+}
+
 #confirm {
 	margin-bottom:10px;
 	margin-top:-5px !important;
@@ -199,6 +203,10 @@ form#settings input#ss, form#add-range input#ss {
 }
 
 table#scheduleBox tr td {
+	padding-bottom:10px;
+}
+
+table#showUsers tr td {
 	padding-bottom:10px;
 }
 
@@ -274,6 +282,13 @@ img#heading {
 	color:#06799f;
 	margin-top:-14px;
 	margin-bottom:15px;
+}
+
+#monthTitle3 {
+	color: #06799F;
+	font-size: 20px;
+	margin-bottom: 5px;
+	margin-top: -10px;
 }
 
 .red {

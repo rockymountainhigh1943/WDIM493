@@ -24,7 +24,7 @@ $(document).ready(function(){
 <form id="settings" method="POST" action="/account/passchange">
 	<div class='item'>
 		Username
-		<input type="text" name="user" value="" />
+		<input type="text" name="user" value="<%= @user.username %>" />
 	</div>
 	<div class='item'>
 		New Password

@@ -1,0 +1,63 @@
+<img id="heading" src="/images/user-admin.jpg" height="28" width="234" alt="User Administration" />
+
+<% if params['status'] == "added" %>
+<div id="confirm">
+	User Added!
+</div>
+<script type="text/javascript">
+	$('#confirm').show(350).delay(3000).hide(350);
+</script>
+<% end %>
+
+<% if params['status'] == "deleted" %>
+<div id="confirm">
+	User Deleted!
+</div>
+<script type="text/javascript">
+	$('#confirm').show(350).delay(3000).hide(350);
+</script>
+<% end %>
+
+<p>Add new user below:</p>
+
+<form id="settings" method="POST" action="/admin/users/add">
+	<div class='item'>
+		First Name
+		<input type="text" name="first" />
+	</div>
+	<div class='item'>
+		Last Name
+		<input type="text" name="last" />
+	</div>
+	<div class='item'>
+		Email
+		<input type="text" name="email" />
+	</div>
+	<div class='item'>
+		Username
+		<input type="text" name="username" />
+	</div>
+	<div class='item'>
+		Password
+		<input type="text" name="password" />
+	</div>
+	<div class='item'>
+		User is Admin?
+		<input type="checkbox" name="admin" value="true"  />
+	</div>
+	<input id="ss" type="image" src="/images/submit.jpg" />
+</form>
+
+<br /><br />
+
+<table id="showUsers" width="100%" border="0">
+	<% @users.each do |user| %>
+		<tr>
+			<td class="listName"><%= user.first_name %> <%= user.last_name %></td>
+			<td class="listUser">Username: <%= user.username %></td>
+			<td class="listEmail"><a href="mailto:<%= user.email %>"><%= user.email %></a></td>
+			<td class="listAdmin">Admin: <% if user.is_admin %>Yes<% else %>No<% end %></td>
+			<td class="listMod blueLink"><a href="/admin/users/delete/<%= user.id %>">Delete</a></td>
+		</tr>
+	<% end %>
+</table>

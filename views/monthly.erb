@@ -1,5 +1,5 @@
 <div id="toolbar">
-	<a href="/admin/add/event/r/<%= @month.erid %>">Add Event</a> | <a href="/admin/schedule">Back to Schedule</a>
+	<a href="/account/signup">Back to Schedule</a>
 </div>
 
 <img id="heading" src="/images/monthly-schedule.jpg" height="34" width="206" alt="Monthly Schedule" />
@@ -21,7 +21,7 @@
 <table border="0" id="scheduleBox" width="100%">
 	<% @events.each do |event| %>
 		<tr>
-			<td><a href="/admin/schedule/event/<%= event.eid %>-<%= @month.erid %>"><%= event.event_day_name %> 
+			<td class="blueLink"><%= event.event_day_name %> 
 			<% if @month.month == 1 %>January<% end %>
 			<% if @month.month == 2 %>February<% end %>
 			<% if @month.month == 3 %>March<% end %>
@@ -34,17 +34,32 @@
 			<% if @month.month == 10 %>October<% end %>
 			<% if @month.month == 11 %>November<% end %>
 			<% if @month.month == 12 %>December<% end %>
-			 <%= event.event_day %></a></td>
+			 <%= event.event_day %></td>
 			 <td><%= event.event_name %>: 
-			 
 			 <% e_type = EventType.all(:etid => event.type) %>
 			 <%= e_type[0].name %>
-
 			 </td>
-			 <td class="blueLink"><a href="/admin/edit/event/<%= event.eid %>-<%= event.event_range %>">Edit</a> | <a href="/admin/delete/event/<%= event.eid %>-<%= @month.erid %>">Delete</a></td>
 			 <td>Need: <%= event.need %></td>
-			 <td>Have: <%= event.have %></td>
 			 <td>Status: <% if event.need == event.have %>Full<% else %><span class="red">Not Set</a><% end %></td>
+			 <%  
+			 	eventStatus = "SELECT status FROM user_events WHERE owner_id = " + @user.id.to_s + " AND event_id = " + event.eid.to_s
+			 	status = repository(:default).adapter.select(eventStatus)
+			 %>
+			 <% if status[0] == 2  %>
+			 	<td>
+			 		<span class="greenLink">Confirmed!</span>
+			 	</td>
+			 <% end %>
+			 <% if status[0] == 1  %>
+			 	<td>
+			 		Requested
+			 	</td>
+			 <% end %>
+			 <% if status[0] == nil || status[0] == 0  %>
+			 	<td class="blueLink">
+			 		<a href="/account/signup/event/<%= @user.id %>-<%= event.eid %>-<%= @month.erid %>">Sign Up!</a>
+			 	</td>
+			 <% end %>
 		</tr>
 	<% end %>
 </table>

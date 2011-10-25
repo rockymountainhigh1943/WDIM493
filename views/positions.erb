@@ -1,0 +1,40 @@
+<img id="heading" src="/images/position-admin.jpg" height="28" width="274" alt="Position Administration" />
+
+<% if params['status'] == "added" %>
+<div id="confirm">
+	Position Added!
+</div>
+<script type="text/javascript">
+	$('#confirm').show(350).delay(3000).hide(350);
+</script>
+<% end %>
+
+<% if params['status'] == "deleted" %>
+<div id="confirm">
+	Position Deleted!
+</div>
+<script type="text/javascript">
+	$('#confirm').show(350).delay(3000).hide(350);
+</script>
+<% end %>
+
+<p>Add new position below:</p>
+
+<form id="settings" method="POST" action="/admin/positions/add">
+	<div class='item'>
+		Position Name
+		<input type="text" name="name" />
+	</div>
+	<input id="ss" type="image" src="/images/submit.jpg" />
+</form>
+
+<br /><br />
+
+<table id="showUsers" width="200" border="0">
+	<% @position.each do |position| %>
+		<tr>
+			<td><%= position.name %></td>
+			<td class="blueLink"><a href="/admin/position/delete/<%= position.pid %>">Delete</a></td>
+		</tr>
+	<% end %>
+</table>

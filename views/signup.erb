@@ -1,2 +1,27 @@
 <img id="heading" src="/images/schedule.jpg" height="28" width="108" alt="Schedule" />
 <p>Please select a date range to view available events below:</p>
+
+<table border="0" id="scheduleBox" width="300">
+	<% @ranges.each do |range| %>
+		<tr>
+			<td class="rangeMY"><a href="/account/signup/monthly/<%= range.erid %>">
+			<% if range.month == 1 %>January<% end %>
+			<% if range.month == 2 %>February<% end %>
+			<% if range.month == 3 %>March<% end %>
+			<% if range.month == 4 %>April<% end %>
+			<% if range.month == 5 %>May<% end %>
+			<% if range.month == 6 %>June<% end %>
+			<% if range.month == 7 %>July<% end %>
+			<% if range.month == 8 %>August<% end %>
+			<% if range.month == 9 %>September<% end %>
+			<% if range.month == 10 %>October<% end %>
+			<% if range.month == 11 %>November<% end %>
+			<% if range.month == 12 %>December<% end %>
+			 <%= range.year %></a></td>
+			<td class="rangeEvents">Events: 
+				<% e_count = Event.all(:event_range => range.erid) %>
+				<%= e_count.count %>
+			</td>
+		</tr>
+	<% end %>
+</table>

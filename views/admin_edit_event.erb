@@ -1,0 +1,82 @@
+<div id="toolbar">
+	<a href="/admin/schedule/monthly/<%= @eventRange.erid %>"><% if @eventRange.month == 1 %>January<% end %>
+	<% if @eventRange.month == 2 %>February<% end %>
+	<% if @eventRange.month == 3 %>March<% end %>
+	<% if @eventRange.month == 4 %>April<% end %>
+	<% if @eventRange.month == 5 %>May<% end %>
+	<% if @eventRange.month == 6 %>June<% end %>
+	<% if @eventRange.month == 7 %>July<% end %>
+	<% if @eventRange.month == 8 %>August<% end %>
+	<% if @eventRange.month == 9 %>September<% end %>
+	<% if @eventRange.month == 10 %>October<% end %>
+	<% if @eventRange.month == 11 %>November<% end %>
+	<% if @eventRange.month == 12 %>December<% end %> <%= @eventRange.year %></a> | <a href="/admin/schedule">Back to Schedule</a>
+</div>
+
+<img id="heading" src="/images/edit-event.jpg" height="28" width="117" alt="Edit Event" />
+
+<div id="monthTitle2">
+	<% if @eventRange.month == 1 %>January<% end %>
+	<% if @eventRange.month == 2 %>February<% end %>
+	<% if @eventRange.month == 3 %>March<% end %>
+	<% if @eventRange.month == 4 %>April<% end %>
+	<% if @eventRange.month == 5 %>May<% end %>
+	<% if @eventRange.month == 6 %>June<% end %>
+	<% if @eventRange.month == 7 %>July<% end %>
+	<% if @eventRange.month == 8 %>August<% end %>
+	<% if @eventRange.month == 9 %>September<% end %>
+	<% if @eventRange.month == 10 %>October<% end %>
+	<% if @eventRange.month == 11 %>November<% end %>
+	<% if @eventRange.month == 12 %>December<% end %> <%= @eventRange.year %>
+</div>
+
+<p>Change event details below:</p>
+
+<div id="add-outer">
+	<div id="add-inner">
+		<form method="post" action="/admin/edit/event">
+			<input type="hidden" name="event_range_id" id="event_range_id" value="<%= @eventRange.erid %>">
+			<input type="hidden" name="event_id" id="event_id" value="<%= @event.eid %>">
+			<div>
+				Name <input type="text" name="event_name" id="event_name" value="<%= @event.event_name %>">
+			</div>
+			<div>
+				Day <input type="text" name="event_day" id="event_day" value="<%= @event.event_day %>">
+			</div>
+			<div>
+				Day Name <input type="text" name="event_day_name" id="event_day_name" value="<%= @event.event_day_name %>">
+			</div>
+			<div>
+				Time <input type="text" name="event_time" id="event_time" value="<%= @event.event_time %>">
+			</div>
+			<div>
+				Type 
+				<select name="type" id="type">
+					<option value="">Select Type</option>
+					<% types = EventType.all;
+					   types.each do |types| %>
+							<option value="<%= types.etid %>"<% if @event.type == types.etid %>selected="selected"<% end %>><%= types.name %></option>
+					<% end %>
+				</select>
+			</div>
+			<div>
+				Location 
+				<select name="location" id="location">
+					<option value="">Select Location</option>
+					<% locations = EventLocation.all;
+					   locations.each do |location| %>
+					   		<option value="<%= location.elid %>"<% if @event.location == location.elid %>selected="selected"<% end %>><%= location.name %></option>
+					   <% end %>
+				</select>
+			</div>
+			<div>
+				Need <input type="text" name="need" id="need" value="<%= @event.need %>">
+			</div>
+			<div>
+				Notes
+				<textarea cols="40" rows="5" name="notes" id="notes"><%= @event.notes %></textarea>
+			</div>
+			<input type="image" src="/images/submit.jpg" id="ss">
+		</form>
+	</div>
+</div>

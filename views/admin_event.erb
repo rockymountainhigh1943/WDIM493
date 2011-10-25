@@ -1,0 +1,41 @@
+<div id="toolbar">
+	<a href="" onClick="window.print()">Print Schedule</a> | <a href="/admin/edit/event/<%= @event.eid %>-<%= @event.event_range %>">Edit Event</a> | <a href="/admin/schedule/monthly/<%= @range.erid %>">Back to <% if @range.month == 1 %>January<% end %>
+<% if @range.month == 2 %>February<% end %>
+<% if @range.month == 3 %>March<% end %>
+<% if @range.month == 4 %>April<% end %>
+<% if @range.month == 5 %>May<% end %>
+<% if @range.month == 6 %>June<% end %>
+<% if @range.month == 7 %>July<% end %>
+<% if @range.month == 8 %>August<% end %>
+<% if @range.month == 9 %>September<% end %>
+<% if @range.month == 10 %>October<% end %>
+<% if @range.month == 11 %>November<% end %>
+<% if @range.month == 12 %>December<% end %></a>
+</div>
+
+<img id="heading" src="/images/event.jpg" height="27" width="63" alt="Event" />
+<div id="monthTitle3">
+<%= @event.event_day_name %> 
+<% if @range.month == 1 %>January<% end %>
+<% if @range.month == 2 %>February<% end %>
+<% if @range.month == 3 %>March<% end %>
+<% if @range.month == 4 %>April<% end %>
+<% if @range.month == 5 %>May<% end %>
+<% if @range.month == 6 %>June<% end %>
+<% if @range.month == 7 %>July<% end %>
+<% if @range.month == 8 %>August<% end %>
+<% if @range.month == 9 %>September<% end %>
+<% if @range.month == 10 %>October<% end %>
+<% if @range.month == 11 %>November<% end %>
+<% if @range.month == 12 %>December<% end %> <%= @event.event_day %>, <%= @range.year %> - <%= @event.event_time %> - <%= @event.event_name %>: <% e_type = EventType.all(:etid => @event.type) %> <%= e_type[0].name %>
+</div>
+
+<div id="eventInfo">
+	<%= @event.notes %>
+</div>
+
+<% workers = UserEvent.all(:event_id => @event.eid)
+   workers.each do |worker|
+%>
+	<%= worker.owner_id %><br />
+<% end %>
