@@ -33,9 +33,68 @@
 <div id="eventInfo">
 	<%= @event.notes %>
 </div>
-
-<% workers = UserEvent.all(:event_id => @event.eid)
-   workers.each do |worker|
+<%
+	workers = UserEvent.all(:event_id => @event.eid)
 %>
-	<%= worker.owner_id %><br />
-<% end %>
+<table border="0" width="700">
+	<% workers.each do |worker| %>
+	<%
+		owner = worker.owner_id 
+		userName = @users.first(:id => worker.owner_id) 
+	%>
+		<tr>
+			<td><%= userName['first_name'] %> <%= userName['last_name'] %></td>
+			<td>
+				<select name="position-<%= owner %>" id="position-<%= owner %>">
+					<option value="0">Select Position</option>
+					<% positions = Position.all;
+					   positions.each do |position| %>
+							<option value="<%= position.pid %>"<% if worker.position == position.pid %>selected="selected"<% end %>><%= position.name %></option>
+					<% end %>
+				</select>
+			</td>
+			<td class="blueLink"><a class="position-<%= owner %>" rel="/admin/schedule/event/confirm/<%= worker.ueid %>-<%= @event.eid %>-<%= @range.erid %>" data-click="confirmClick" href="#">Confirm</a> | <a href="/admin/schedule/event/deny/<%= worker.ueid %>-<%= @event.eid %>-<%= @range.erid %>">Deny</a></td>
+			<td>Status:
+
+			<% eventStatus = "SELECT status FROM user_events WHERE owner_id = " + owner.to_s + " AND event_id = " + @event.eid.to_s
+			   status = repository(:default).adapter.select(eventStatus) %>
+
+			<% if status[0] == 1 %>
+				Pending
+			<% end %>
+
+			<% if status[0] == 2  %>
+			 	<span class="greenLink">Confirmed!</span>
+			<% end %>
+
+			<% if status[0] == 3  %>
+			 	<span class="redLink">Not Working</span>
+			<% end %>
+
+
+			</td>
+		</tr>
+	<% end %>
+</table>
+
+<script type="text/javascript">
+$(function(){
+	// handles setting positions dynamiclly
+	$('option').mouseup(function(){
+		value = $(this).attr('value');
+		id = $(this).parent().attr('name');
+		original = $('a.'+id).attr('rel');
+		// We set our url based on the position selected
+		$('a.'+id).attr('href', original + '-' + value);
+	});
+	// checks to see if position is set before confirminga
+	$('a[data-click]').click(function(e){
+		e.preventDefault();
+		if( $(this).attr('href') == "#" ) {
+			alert("Please assign the worker a position");
+		} else {
+			window.location = $(this).attr('href');
+		}
+	});
+});
+</script>

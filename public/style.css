@@ -210,6 +210,10 @@ table#showUsers tr td {
 	padding-bottom:10px;
 }
 
+#eventInfo {
+	margin-bottom:15px;
+}
+
 /* ------------- Typograhy ------------- */
 
 #content p, #content ul, #content ol {
@@ -267,6 +271,10 @@ img#heading {
 }
 
 .redLink a:link, .redLink a:visited {
+	color:#CF6161 !important;
+}
+
+.redLink {
 	color:#CF6161 !important;
 }
 

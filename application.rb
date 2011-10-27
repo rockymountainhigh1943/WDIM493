@@ -288,7 +288,37 @@ get '/admin/schedule/event/:event' do |event|
 	@event = Event.first(:eid => splitArgs[0])
 	type_ = @event.type
 	@type = EventType.first(:etid => type_)
+	@users = User.all
 	erb :admin_event, :locals => { :active => 'admin' }
+end
+
+### Confirm User for Event
+get '/admin/schedule/event/confirm/:info' do |info|
+	redirect '/' if !@user.is_admin
+	splitArgs = params['info'].split('-')
+	ueid = splitArgs[0]
+	event = splitArgs[1]
+	range = splitArgs[2]
+	position = splitArgs[3]
+	updateUserEvent = UserEvent.first(:ueid => ueid)
+	if updateUserEvent
+		updateUserEvent.update(:position => position, :status => 2)
+	end
+	redirect '/admin/schedule/event/'+event+'-'+range
+end
+
+### Deny or Cancel for Event
+get '/admin/schedule/event/deny/:info' do |info|
+	redirect '/' if !@user.is_admin
+	splitArgs = params['info'].split('-')
+	ueid = splitArgs[0]
+	event = splitArgs[1]
+	range = splitArgs[2]
+	updateUserEvent = UserEvent.first(:ueid => ueid)
+	if updateUserEvent
+		updateUserEvent.update(:status => 3)
+	end
+	redirect '/admin/schedule/event/'+event+'-'+range
 end
 
 ### Add Positions
