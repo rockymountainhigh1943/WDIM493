@@ -1,100 +1,104 @@
-2011-06-14T07:09:31+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/js/jquery-1.6.1.min.js dyno=web.1 queue=0 wait=0ms service=4ms bytes=91342
-2011-06-14T07:09:31+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/logo.png dyno=web.1 queue=0 wait=0ms service=1ms bytes=4645
-2011-06-14T07:09:31+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/new-event.jpg dyno=web.1 queue=0 wait=0ms service=6ms bytes=6775
-2011-06-14T07:09:31+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/back.jpg dyno=web.1 queue=0 wait=0ms service=4ms bytes=1246
-2011-06-14T00:09:32-07:00 heroku[nginx]: GET /images/logo.png HTTP/1.1 | 71.236.187.136 | 198 | http | 304
-2011-06-14T07:21:21+00:00 heroku[router]: POST freezing-leaf-974.heroku.com/_heroku/console dyno=web.1 queue=0 wait=0ms service=1360ms bytes=18
-2011-06-14T00:21:22-07:00 heroku[nginx]: POST /_heroku/console?session_id=882246&session_action=create HTTP/1.1 | 50.19.47.9 | 166 | http | 200
-2011-06-14T07:24:43+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/admin/add/event/r/4 dyno=web.1 queue=0 wait=0ms service=167ms bytes=2539
-2011-06-14T07:24:43+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/style.css dyno=web.1 queue=0 wait=0ms service=2ms bytes=4825
-2011-06-14T07:24:43+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/js/jquery-1.6.1.min.js dyno=web.1 queue=0 wait=0ms service=4ms bytes=91342
-2011-06-14T07:24:43+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/logo.png dyno=web.1 queue=0 wait=0ms service=1ms bytes=4645
-2011-06-14T07:24:43+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/new-event.jpg dyno=web.1 queue=0 wait=0ms service=7ms bytes=6775
-2011-06-14T00:24:43-07:00 heroku[nginx]: GET /admin/add/event/r/4 HTTP/1.1 | 71.236.187.136 | 1415 | http | 200
-2011-06-14T07:24:43+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/back.jpg dyno=web.1 queue=0 wait=0ms service=4ms bytes=1246
-2011-06-14T00:24:44-07:00 heroku[nginx]: GET /js/jquery-1.6.1.min.js HTTP/1.1 | 71.236.187.136 | 197 | http | 304
-2011-06-14T00:24:44-07:00 heroku[nginx]: GET /images/new-event.jpg HTTP/1.1 | 71.236.187.136 | 199 | http | 304
-2011-06-14T00:24:44-07:00 heroku[nginx]: GET /images/back.jpg HTTP/1.1 | 71.236.187.136 | 199 | http | 304
-2011-06-14T07:25:14+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/admin/add/event/r/4 dyno=web.1 queue=0 wait=0ms service=9ms bytes=2539
-2011-06-14T07:25:15+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/js/jquery-1.6.1.min.js dyno=web.1 queue=0 wait=0ms service=8ms bytes=91342
-2011-06-14T07:25:15+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/style.css dyno=web.1 queue=0 wait=0ms service=2ms bytes=0
-2011-06-14T07:25:15+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/new-event.jpg dyno=web.1 queue=0 wait=0ms service=2ms bytes=0
-2011-06-14T07:25:15+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/back.jpg dyno=web.1 queue=0 wait=0ms service=2ms bytes=0
-2011-06-14T07:25:15+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/logo.png dyno=web.1 queue=0 wait=0ms service=5ms bytes=4645
-2011-06-14T00:25:15-07:00 heroku[nginx]: GET /js/jquery-1.6.1.min.js HTTP/1.1 | 71.236.187.136 | 198 | http | 304
-2011-06-14T00:25:16-07:00 heroku[nginx]: GET /images/logo.png HTTP/1.1 | 71.236.187.136 | 198 | http | 304
-2011-06-14T07:26:15+00:00 heroku[router]: POST freezing-leaf-974.heroku.com/_heroku/console dyno=web.1 queue=0 wait=0ms service=1047ms bytes=18
-2011-06-14T00:27:11-07:00 heroku[slugc]: Slug compilation started
-2011-06-14T07:27:16+00:00 heroku[api]: Deploy 7393ed4 by rockymountainhigh1943@gmail.com
-2011-06-14T07:27:16+00:00 heroku[api]: Release v108 created by rockymountainhigh1943@gmail.com
-2011-06-14T00:27:16-07:00 heroku[slugc]: Slug compilation finished
-2011-06-14T07:27:16+00:00 heroku[web.1]: State changed from up to bouncing
-2011-06-14T07:27:16+00:00 heroku[web.1]: State changed from created to starting
-2011-06-14T07:27:19+00:00 heroku[web.1]: Starting process with command: `thin -p 44679 -e production -R /home/heroku_rack/heroku.ru start`
-2011-06-14T07:27:21+00:00 app[web.1]: DataObjects::URI.new with arguments is deprecated, use a Hash of URI components (/app/.bundle/gems/ruby/1.9.1/gems/dm-do-adapter-1.1.0/lib/dm-do-adapter/adapter.rb:231:in `new')
-2011-06-14T07:27:25+00:00 heroku[web.1]: State changed from starting to up
-2011-06-14T07:27:25+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/ dyno=web.1 queue=0 wait=0ms service=39ms bytes=1314
-2011-06-14T07:27:28+00:00 heroku[router]: POST freezing-leaf-974.heroku.com/ dyno=web.1 queue=0 wait=0ms service=189ms bytes=0
-2011-06-14T07:27:28+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/account dyno=web.1 queue=0 wait=0ms service=5ms bytes=1348
-2011-06-14T07:27:30+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/admin/schedule dyno=web.1 queue=0 wait=0ms service=56ms bytes=2573
-2011-06-14T07:27:32+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/admin/add/event/r/4 dyno=web.1 queue=0 wait=0ms service=14ms bytes=2486
-2011-06-14T07:27:59+00:00 heroku[web.1]: Stopping process with SIGTERM
-2011-06-14T07:27:59+00:00 heroku[web.1]: Process exited
-2011-06-14T01:05:54-07:00 heroku[slugc]: Slug compilation started
-2011-06-14T08:05:59+00:00 heroku[api]: Deploy 77cbf56 by rockymountainhigh1943@gmail.com
-2011-06-14T08:05:59+00:00 heroku[api]: Release v109 created by rockymountainhigh1943@gmail.com
-2011-06-14T08:05:59+00:00 heroku[web.1]: State changed from up to bouncing
-2011-06-14T08:05:59+00:00 heroku[web.1]: State changed from created to starting
-2011-06-14T01:06:00-07:00 heroku[slugc]: Slug compilation finished
-2011-06-14T08:06:02+00:00 heroku[web.1]: Starting process with command: `thin -p 51343 -e production -R /home/heroku_rack/heroku.ru start`
-2011-06-14T08:06:04+00:00 app[web.1]: DataObjects::URI.new with arguments is deprecated, use a Hash of URI components (/app/.bundle/gems/ruby/1.9.1/gems/dm-do-adapter-1.1.0/lib/dm-do-adapter/adapter.rb:231:in `new')
-2011-06-14T08:06:07+00:00 heroku[web.1]: State changed from starting to up
-2011-06-14T08:06:15+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/logout dyno=web.1 queue=0 wait=0ms service=54ms bytes=0
-2011-06-14T08:06:15+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/ dyno=web.1 queue=0 wait=0ms service=7ms bytes=1314
-2011-06-14T08:06:15+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/style.css dyno=web.1 queue=0 wait=0ms service=1ms bytes=4825
-2011-06-14T08:06:15+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/js/jquery-1.6.1.min.js dyno=web.1 queue=0 wait=0ms service=9ms bytes=91342
-2011-06-14T01:06:15-07:00 heroku[nginx]: GET /logout HTTP/1.1 | 71.236.187.136 | 488 | http | 302
-2011-06-14T01:06:15-07:00 heroku[nginx]: GET / HTTP/1.1 | 71.236.187.136 | 1152 | http | 200
-2011-06-14T01:06:16-07:00 heroku[nginx]: GET /style.css HTTP/1.1 | 71.236.187.136 | 1788 | http | 200
-2011-06-14T01:06:16-07:00 heroku[nginx]: GET /js/jquery-1.6.1.min.js HTTP/1.1 | 71.236.187.136 | 33283 | http | 200
-2011-06-14T08:06:18+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/logo.png dyno=web.1 queue=0 wait=0ms service=2ms bytes=4645
-2011-06-14T08:06:18+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/back.jpg dyno=web.1 queue=0 wait=0ms service=1ms bytes=1246
-2011-06-14T01:06:19-07:00 heroku[nginx]: GET /images/back.jpg HTTP/1.1 | 71.236.187.136 | 1491 | http | 200
-2011-06-14T01:06:19-07:00 heroku[nginx]: GET /images/logo.png HTTP/1.1 | 71.236.187.136 | 4888 | http | 200
-2011-06-14T08:06:21+00:00 heroku[router]: POST freezing-leaf-974.heroku.com/ dyno=web.1 queue=0 wait=0ms service=170ms bytes=0
-2011-06-14T08:06:21+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/account dyno=web.1 queue=0 wait=0ms service=5ms bytes=1348
-2011-06-14T08:06:22+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/style.css dyno=web.1 queue=0 wait=0ms service=9ms bytes=4825
-2011-06-14T01:06:22-07:00 heroku[nginx]: POST / HTTP/1.1 | 71.236.187.136 | 468 | http | 302
-2011-06-14T08:06:22+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/js/jquery-1.6.1.min.js dyno=web.1 queue=0 wait=0ms service=4ms bytes=91342
-2011-06-14T01:06:22-07:00 heroku[nginx]: GET /account HTTP/1.1 | 71.236.187.136 | 1065 | http | 200
-2011-06-14T08:06:22+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/logo.png dyno=web.1 queue=0 wait=0ms service=1ms bytes=4645
-2011-06-14T08:06:22+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/back.jpg dyno=web.1 queue=0 wait=0ms service=3ms bytes=1246
-2011-06-14T01:06:22-07:00 heroku[nginx]: GET /style.css HTTP/1.1 | 71.236.187.136 | 198 | http | 304
-2011-06-14T01:06:22-07:00 heroku[nginx]: GET /js/jquery-1.6.1.min.js HTTP/1.1 | 71.236.187.136 | 198 | http | 304
-2011-06-14T01:06:23-07:00 heroku[nginx]: GET /images/logo.png HTTP/1.1 | 71.236.187.136 | 199 | http | 304
-2011-06-14T01:06:23-07:00 heroku[nginx]: GET /images/back.jpg HTTP/1.1 | 71.236.187.136 | 198 | http | 304
-2011-06-14T08:06:24+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/admin/schedule dyno=web.1 queue=0 wait=0ms service=35ms bytes=2573
-2011-06-14T08:06:26+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/admin/schedule/monthly/4 dyno=web.1 queue=0 wait=0ms service=23ms bytes=1166
-2011-06-14T08:06:27+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/js/jquery-1.6.1.min.js dyno=web.1 queue=0 wait=0ms service=2ms bytes=0
-2011-06-14T08:06:27+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/style.css dyno=web.1 queue=0 wait=0ms service=5ms bytes=4825
-2011-06-14T08:06:27+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/back.jpg dyno=web.1 queue=0 wait=0ms service=8ms bytes=0
-2011-06-14T08:06:27+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/logo.png dyno=web.1 queue=0 wait=0ms service=8ms bytes=4645
-2011-06-14T01:06:27-07:00 heroku[nginx]: GET /js/jquery-1.6.1.min.js HTTP/1.1 | 71.236.187.136 | 206 | http | 304
-2011-06-14T01:06:27-07:00 heroku[nginx]: GET /images/back.jpg HTTP/1.1 | 71.236.187.136 | 206 | http | 304
-2011-06-14T01:06:27-07:00 heroku[nginx]: GET /images/logo.png HTTP/1.1 | 71.236.187.136 | 197 | http | 304
-2011-06-14T08:06:28+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/admin/add/event/r/4 dyno=web.1 queue=0 wait=0ms service=12ms bytes=2518
-2011-06-14T08:06:28+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/new-event.jpg dyno=web.1 queue=0 wait=0ms service=2ms bytes=6775
-2011-06-14T08:06:28+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/add-event.jpg dyno=web.1 queue=0 wait=0ms service=2ms bytes=4823
-2011-06-14T01:06:29-07:00 heroku[nginx]: GET /images/new-event.jpg HTTP/1.1 | 71.236.187.136 | 7018 | http | 200
-2011-06-14T01:06:29-07:00 heroku[nginx]: GET /images/add-event.jpg HTTP/1.1 | 71.236.187.136 | 5068 | http | 200
-2011-06-14T08:06:58+00:00 heroku[router]: POST freezing-leaf-974.heroku.com/admin/add/event/r/4 dyno=web.1 queue=0 wait=0ms service=23ms bytes=17
-2011-06-14T08:07:11+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/admin/schedule/monthly/4 dyno=web.1 queue=0 wait=0ms service=10ms bytes=1166
-2011-06-14T08:07:12+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/style.css dyno=web.1 queue=0 wait=0ms service=2ms bytes=0
-2011-06-14T08:07:12+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/js/jquery-1.6.1.min.js dyno=web.1 queue=0 wait=0ms service=1ms bytes=0
-2011-06-14T08:07:12+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/logo.png dyno=web.1 queue=0 wait=0ms service=4ms bytes=0
-2011-06-14T08:07:12+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/back.jpg dyno=web.1 queue=0 wait=0ms service=4ms bytes=1246
-2011-06-14T01:07:12-07:00 heroku[nginx]: GET /style.css HTTP/1.1 | 71.236.187.136 | 206 | http | 304
-2011-06-14T01:07:12-07:00 heroku[nginx]: GET /js/jquery-1.6.1.min.js HTTP/1.1 | 71.236.187.136 | 206 | http | 304
-2011-06-14T01:07:12-07:00 heroku[nginx]: GET /images/logo.png HTTP/1.1 | 71.236.187.136 | 205 | http | 304
-2011-06-14T08:07:20+00:00 heroku[web.1]: Stopping process with SIGTERM
-2011-06-14T08:07:21+00:00 heroku[web.1]: Process exited
+2011-10-31T03:27:05+00:00 heroku[web.1]: Starting process with command `thin -p 27659 -e production -R /home/heroku_rack/heroku.ru start`
+2011-10-31T03:27:06+00:00 heroku[web.1]: Stopping process with SIGTERM
+2011-10-31T03:27:06+00:00 heroku[web.1]: Process exited
+2011-10-31T03:27:06+00:00 app[web.1]: DataObjects::URI.new with arguments is deprecated, use a Hash of URI components (/app/.bundle/gems/ruby/1.9.1/gems/dm-do-adapter-1.1.0/lib/dm-do-adapter/adapter.rb:231:in `new')
+2011-10-31T03:27:07+00:00 heroku[web.1]: State changed from starting to up
+2011-10-31T03:27:08+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/admin/schedule/monthly/4 dyno=web.1 queue=0 wait=0ms service=66ms status=500 bytes=17
+2011-10-31T03:27:08+00:00 heroku[nginx]: 71.236.187.136 - - [30/Oct/2011:20:27:08 -0700] "GET /admin/schedule/monthly/4 HTTP/1.1" 500 17 "http://freezing-leaf-974.heroku.com/admin/schedule/event/8-4" "Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1" freezing-leaf-974.heroku.com
+2011-10-31T03:27:13+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/admin/schedule/monthly/4 dyno=web.1 queue=0 wait=0ms service=4ms status=500 bytes=17
+2011-10-31T03:28:13+00:00 heroku[slugc]: Slug compilation started
+2011-10-31T03:28:20+00:00 heroku[api]: Deploy a560a4b by rockymountainhigh1943@gmail.com
+2011-10-31T03:28:20+00:00 heroku[api]: Release v118 created by rockymountainhigh1943@gmail.com
+2011-10-31T03:28:20+00:00 heroku[slugc]: Slug compilation finished
+2011-10-31T03:28:21+00:00 heroku[web.1]: Starting process with command `thin -p 20231 -e production -R /home/heroku_rack/heroku.ru start`
+2011-10-31T03:28:22+00:00 heroku[web.1]: Stopping process with SIGTERM
+2011-10-31T03:28:23+00:00 heroku[web.1]: Process exited
+2011-10-31T03:28:23+00:00 app[web.1]: DataObjects::URI.new with arguments is deprecated, use a Hash of URI components (/app/.bundle/gems/ruby/1.9.1/gems/dm-do-adapter-1.1.0/lib/dm-do-adapter/adapter.rb:231:in `new')
+2011-10-31T03:28:24+00:00 heroku[web.1]: State changed from starting to up
+2011-10-31T03:28:25+00:00 heroku[nginx]: 71.236.187.136 - - [30/Oct/2011:20:28:25 -0700] "GET /admin/schedule/monthly/4 HTTP/1.1" 500 17 "http://freezing-leaf-974.heroku.com/admin/schedule/event/8-4" "Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1" freezing-leaf-974.heroku.com
+2011-10-31T03:28:25+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/admin/schedule/monthly/4 dyno=web.1 queue=0 wait=0ms service=63ms status=500 bytes=17
+2011-10-31T03:28:30+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/logout dyno=web.1 queue=0 wait=0ms service=4ms status=302 bytes=0
+2011-10-31T03:28:30+00:00 heroku[nginx]: 71.236.187.136 - - [30/Oct/2011:20:28:30 -0700] "GET /logout HTTP/1.1" 302 0 "http://freezing-leaf-974.heroku.com/admin/schedule/event/8-4" "Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1" freezing-leaf-974.heroku.com
+2011-10-31T03:28:30+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/ dyno=web.1 queue=0 wait=0ms service=7ms status=200 bytes=1321
+2011-10-31T03:28:30+00:00 he
+roku[nginx]: 71.236.187.136 - - [30/Oct/2011:20:28:30 -0700] "GET / HTTP/1.1" 200 699 "http://freezing-leaf-974.heroku.com/admin/schedule/event/8-4" "Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1" freezing-leaf-974.heroku.com
+2011-10-31T03:28:30+00:00 heroku[nginx]: 71.236.187.136 - - [30/Oct/2011:20:28:30 -0700] "GET /style.css HTTP/1.1" 200 1561 "http://freezing-leaf-974.heroku.com/" "Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1" freezing-leaf-974.heroku.com
+2011-10-31T03:28:30+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/js/jquery-1.6.1.min.js dyno=web.1 queue=0 wait=0ms service=14ms status=200 bytes=91342
+2011-10-31T03:28:30+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/welcome.jpg dyno=web.1 queue=0 wait=1ms service=8ms status=200 bytes=9244
+2011-10-31T03:28:30+00:00 heroku[nginx]: 71.236.187.136 - - [30/Oct/2011:20:28:30 -0700] "GET /js/jquery-1.6.1.min.js HTTP/1.1" 200 32899 "http://freezing-leaf-974.heroku.com/" "Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1" freezing-leaf-974.heroku.com
+2011-10-31T03:28:30+00:00 heroku[nginx]: 71.236.187.136 - - [30/Oct/2011:20:28:30 -0700] "GET /images/welcome.jpg HTTP/1.1" 200 9244 "http://freezing-leaf-974.heroku.com/" "Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1" freezing-leaf-974.heroku.com
+2011-10-31T03:28:31+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/logo.png dyno=web.1 queue=0 wait=0ms service=3ms status=200 bytes=4645
+2011-10-31T03:28:31+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/back.jpg dyno=web.1 queue=0 wait=0ms service=4ms status=200 bytes=1246
+2011-10-31T03:28:31+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/login.jpg dyno=web.1 queue=0 wait=0ms service=4ms status=200 bytes=2137
+2011-10-31T03:28:31+00:00 heroku[nginx]: 71.236.187.136 - - [30/Oct/2011:20:28:31 -0700] "GET /images/login.jpg HTTP/1.1" 200 2137 "http://freezing-leaf-974.heroku.com/" "Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1" freezing-leaf-974.heroku.com
+2011-10-31T03:28:31+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/pass.jpg dyno=web.1 queue=0 wait=0ms service=3ms status=200 bytes=2227
+2011-10-31T03:28:31+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/user.jpg dyno=web.1 queue=0 wait=0ms service=3ms status=200 bytes=2163
+2011-10-31T03:28:31+00:00 heroku[nginx]: 71.236.187.136 - - [30/Oct/2011:20:28:31 -0700] "GET /images/pass.jpg HTTP/1.1" 200 2227 "http://freezing-leaf-974.heroku.com/style.css" "Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1" freezing-leaf-974.heroku.com
+2011-10-31T03:28:31+00:00 heroku[nginx]: 71.236.187.136 - - [30/Oct/2011:20:28:31 -0700] "GET /images/user.jpg HTTP/1.1" 200 2163 "http://freezing-leaf-974.heroku.com/style.css" "Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1" freezing-leaf-974.heroku.com
+2011-10-31T03:28:35+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/account dyno=web.1 queue=0 wait=0ms service=7ms status=200 bytes=1262
+2011-10-31T03:28:35+00:00 heroku[nginx]: 71.236.187.136 - - [30/Oct/2011:20:28:35 -0700] "GET /account HTTP/1.1" 200 571 "http://freezing-leaf-974.heroku.com/" "Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1" freezing-leaf-974.heroku.com
+2011-10-31T03:28:35+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/style.css dyno=web.1 queue=0 wait=0ms service=5ms status=200 bytes=5115
+2011-10-31T03:28:35+00:00 heroku[nginx]: 71.236.187.136 - - [30/Oct/2011:20:28:35 -0700] "GET /style.css HTTP/1.1" 304 0 "http://freezing-leaf-974.heroku.com/account" "Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1" freezing-leaf-974.heroku.com
+2011-10-31T03:28:35+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/js/jquery-1.6.1.min.js dyno=web.1 queue=0 wait=0ms service=15ms status=200 bytes=91342
+2011-10-31T03:28:35+00:00 heroku[nginx]: 71.236.187.136 - - [30/Oct/2011:20:28:35 -0700] "GET /js/jquery-1.6.1.min.js HTTP/1.1" 304 0 "http://freezing-leaf-974.heroku.com/account" "Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1" freezing-leaf-974.heroku.com
+2011-10-31T03:28:36+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/logo.png d
+yno=web.1 queue=0 wait=0ms service=7ms status=200 bytes=4645
+2011-10-31T03:28:36+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/back.jpg dyno=web.1 queue=0 wait=0ms service=5ms status=200 bytes=1246
+2011-10-31T03:28:36+00:00 heroku[nginx]: 71.236.187.136 - - [30/Oct/2011:20:28:36 -0700] "GET /images/back.jpg HTTP/1.1" 304 0 "http://freezing-leaf-974.heroku.com/style.css" "Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1" freezing-leaf-974.heroku.com
+2011-10-31T03:28:36+00:00 heroku[nginx]: 71.236.187.136 - - [30/Oct/2011:20:28:36 -0700] "GET /images/logo.png HTTP/1.1" 304 0 "http://freezing-leaf-974.heroku.com/account" "Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1" freezing-leaf-974.heroku.com
+2011-10-31T03:28:37+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/admin dyno=web.1 queue=0 wait=0ms service=74ms status=200 bytes=1091
+2011-10-31T03:28:38+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/admin.jpg dyno=web.1 queue=0 wait=0ms service=4ms status=200 bytes=8595
+2011-10-31T03:28:39+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/admin/schedule dyno=web.1 queue=0 wait=0ms service=24ms status=200 bytes=2113
+2011-10-31T03:28:39+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/js/jquery-1.6.1.min.js dyno=web.1 queue=0 wait=0ms service=10ms status=200 bytes=91342
+2011-10-31T03:28:39+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/logo.png dyno=web.1 queue=0 wait=0ms service=4ms status=200 bytes=4645
+2011-10-31T03:28:40+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/back.jpg dyno=web.1 queue=0 wait=0ms service=3ms status=200 bytes=1246
+2011-10-31T03:28:41+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/admin/schedule/monthly/3 dyno=web.1 queue=0 wait=0ms service=31ms status=200 bytes=2672
+2011-10-31T03:28:41+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/monthly-schedule.jpg dyno=web.1 queue=0 wait=0ms service=3ms status=200 bytes=10545
+2011-10-31T03:28:42+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/account/view dyno=web.1 queue=0 wait=0ms service=132ms status=500 bytes=17
+2011-10-31T03:29:39+00:00 heroku[nginx]: 71.236.187.136 - - [30/Oct/2011:20:28:39 -0700] "GET /images/schedule.jpg HTTP/1.1" 200 5800 "http://freezing-leaf-974.heroku.com/admin/schedule" "Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1" freezing-leaf-974.heroku.com
+2011-10-31T03:29:39+00:00 heroku[nginx]: 71.236.187.136 - - [30/Oct/2011:20:28:40 -0700] "GET /images/back.jpg HTTP/1.1" 304 0 "http://freezing-leaf-974.heroku.com/style.css" "Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1" freezing-leaf-974.heroku.com
+2011-10-31T03:32:38+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/admin/schedule/monthly/3 dyno=web.1 queue=0 wait=0ms service=102ms status=200 bytes=2672
+2011-10-31T03:32:38+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/style.css dyno=web.1 queue=0 wait=0ms service=4ms status=200 bytes=5115
+2011-10-31T03:32:38+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/js/jquery-1.6.1.min.js dyno=web.1 queue=0 wait=0ms service=5ms status=304 bytes=0
+2011-10-31T03:32:38+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/monthly-schedule.jpg dyno=web.1 queue=0 wait=0ms service=4ms status=200 bytes=10545
+2011-10-31T03:32:38+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/logo.png dyno=web.1 queue=0 wait=0ms service=5ms status=304 bytes=0
+2011-10-31T03:32:39+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/back.jpg dyno=web.1 queue=0 wait=0ms service=10ms status=200 bytes=1246
+2011-10-31T03:33:30+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/account/view dyno=web.1 queue=0 wait=0ms service=7ms status=500 bytes=17
+2011-10-31T03:33:30+00:00 heroku[nginx]: 71.236.187.136 - - [30/Oct/2011:20:33:30 -0700] "GET /account/view HTTP/1.1" 500 17 "http://freezing-leaf-974.heroku.com/admin/schedule/monthly/3" "Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1" freezing-leaf-974.heroku.com
+2011-10-31T03:33:32+00:00 heroku[nginx]: 71.236.187.136 - - [30/Oct/2011:20:33:32 -0700] "GET /account/view HTTP/1.1" 500 17 "http://freezing-leaf-974.heroku.com/admin/schedule/monthly/3" "Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/2
+0100101 Firefox/7.0.1" freezing-leaf-974.heroku.com
+2011-10-31T03:33:32+00:00 heroku[nginx]: 71.236.187.136 - - [30/Oct/2011:20:33:32 -0700] "GET /account/view HTTP/1.1" 500 17 "http://freezing-leaf-974.heroku.com/admin/schedule/monthly/3" "Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1" freezing-leaf-974.heroku.com
+2011-10-31T03:33:32+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/account/view dyno=web.1 queue=0 wait=0ms service=37ms status=500 bytes=17
+2011-10-31T03:33:33+00:00 heroku[nginx]: 71.236.187.136 - - [30/Oct/2011:20:33:33 -0700] "GET /account/view HTTP/1.1" 500 17 "http://freezing-leaf-974.heroku.com/admin/schedule/monthly/3" "Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1" freezing-leaf-974.heroku.com
+2011-10-31T03:35:27+00:00 heroku[api]: Config add LOG_LEVEL by rockymountainhigh1943@gmail.com
+2011-10-31T03:35:27+00:00 heroku[api]: Release v119 created by rockymountainhigh1943@gmail.com
+2011-10-31T03:35:27+00:00 heroku[web.1]: State changed from up to bouncing
+2011-10-31T03:35:27+00:00 heroku[web.1]: State changed from bouncing to created
+2011-10-31T03:35:27+00:00 heroku[web.1]: State changed from created to starting
+2011-10-31T03:35:28+00:00 heroku[web.1]: Starting process with command `thin -p 11947 -e production -R /home/heroku_rack/heroku.ru start`
+2011-10-31T03:35:30+00:00 app[web.1]: DataObjects::URI.new with arguments is deprecated, use a Hash of U
+RI components (/app/.bundle/gems/ruby/1.9.1/gems/dm-do-adapter-1.1.0/lib/dm-do-adapter/adapter.rb:231:in `new')
+2011-10-31T03:35:30+00:00 heroku[web.1]: Stopping process with SIGTERM
+2011-10-31T03:35:31+00:00 heroku[web.1]: Process exited
+2011-10-31T03:35:31+00:00 heroku[web.1]: State changed from starting to up
+2011-10-31T03:35:32+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/account/view dyno=web.1 queue=0 wait=0ms service=66ms status=302 bytes=0
+2011-10-31T03:35:33+00:00 heroku[nginx]: 71.236.187.136 - - [30/Oct/2011:20:35:33 -0700] "GET /style.css HTTP/1.1" 304 0 "http://freezing-leaf-974.heroku.com/" "Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1" freezing-leaf-974.heroku.com
+2011-10-31T03:35:33+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/js/jquery-1.6.1.min.js dyno=web.1 queue=0 wait=0ms service=8ms status=200 bytes=91342
+2011-10-31T03:35:33+00:00 heroku[nginx]: 71.236.187.136 - - [30/Oct/2011:20:35:33 -0700] "GET /js/jquery-1.6.1.min.js HTTP/1.1" 304 0 "http://freezing-leaf-974.heroku.com/" "Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1" freezing-leaf-974.heroku.com
+2011-10-31T03:35:33+00:00 heroku[nginx]: 71.236.187.136 - - [30/Oct/2011:20:35:33 -0700] "GET /images/welcome.jpg HTTP/1.1" 304 0 "http://freezing-leaf-974.heroku.com/" "Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1" freezing-leaf-974.heroku.com
+2011-10-31T03:35:33+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/back.jpg dyno=web.1 queue=0 wait=0ms service=1ms status=200 bytes=1246
+2011-10-31T03:35:33+00:00 heroku[nginx]: 71.236.187.136 - - [30/Oct/2011:20:35:33 -0700] "GET /images/back.jpg HTTP/1.1" 304 0 "http://freezing-leaf-974.heroku.com/style.css" "Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1" freezing-leaf-974.heroku.com
+2011-10-31T03:35:33+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/login.jpg dyno=web.1 queue=0 wait=0ms service=6ms status=200 bytes=2137
+2011-10-31T03:35:33+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/user.jpg dyno=web.1 queue=0 wait=0ms service=5ms status=200 bytes=2163
+2011-10-31T03:35:33+00:00 heroku[nginx]: 71.236.187.136 - - [30/Oct/2011:20:35:33 -0700] "GET /images/user.jpg HTTP/1.1" 304 0 "http://freezing-leaf-974.heroku.com/style.css" "Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1" freezing-leaf-974.heroku.com
+2011-10-31T03:35:33+00:00 heroku[nginx]: 71.236.187.136 - - [30/Oct/2011:20:35:33 -0700] "GET /images/pass.jpg HTTP/1.1" 304 0 "http://freezing-leaf-974.heroku.com/style.css" "Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1" freezing-leaf-974.heroku.com
+2011-10-31T03:35:40+00:00 heroku[router]: POST freezing-leaf-974.heroku.com/ dyno=web.1 queue=0 wait=0ms service=2258ms status=302 bytes=0
+2011-10-31T03:35:40+00:00 heroku[nginx]: 71.236.187.136 - - [30/Oct/2011:20:35:40 -0700] "POST / HTTP/1.1" 302 0 "http://freezing-leaf-974.heroku.com/" "Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1" freezing-leaf-974.heroku.com
+2011-10-31T03:35:40+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/account dyno=web.1 queue=0 wait=0ms service=8ms status=200 bytes=1262
+2011-10-31T03:35:40+00:00 heroku[nginx]: 71.236.187.136 - - [30/Oct/2011:20:35:40 -0700] "GET /account HTTP/1.1" 200 571 "http://freezing-leaf-974.heroku.com/" "Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1" freezing-leaf-974.heroku.com
+2011-10-31T03:35:42+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/admin/schedule dyno=web.1 queue=0 wait=0ms service=43ms status=200 bytes=2113
+2011-10-31T03:35:42+00:00 heroku[nginx]: 71.236.187.136 - - [30/Oct/2011:20:35:42 -0700] "GET /admin/schedule HTTP/1.1" 200 758 "http://freezing-leaf-974.heroku.com/account" "Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1" freezing-leaf-974.heroku.com
+2011-10-31T03:35:42+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/images/schedule.jpg dyno=web.1 queue=0 wait=0ms service=10ms status=200 bytes=5800
+2011-10-31T03:35:42+00:00 heroku[nginx]: 71.236.187.136 - - [30/Oct/2011:20:35:42 -0700] "GET /images/schedule.jpg HTTP/1.1" 304 0 "http://freezing-leaf-974.heroku.com/admin/schedule" "Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1" freezing-leaf-974.heroku.com
+2011-10-31T03:35:44+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/account/view dyno=web.1 queue=0 wait=0ms service=19ms status=500 bytes=17
+2011-10-31T03:36:07+00:00 heroku[router]: GET freezing-leaf-974.heroku.com/account/view dyno=web.1 queue=0 wait=12ms service=33ms status=500 bytes=17
