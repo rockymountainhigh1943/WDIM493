@@ -76,6 +76,12 @@ end
 ### View User Events
 get '/account/view/?' do
 	redirect '/' if !@user
+	sql = "SELECT e.event_name, e.event_day, e.event_day_name, e.event_time, e.type, e.location, ue.position, er.month 
+	FROM events e, user_events ue, event_ranges er , positions p
+	WHERE e.event_range = er.erid AND er.active = 1 AND ue.event_id = e.eid  AND ue.owner_id = " + @user.id.to_s + " 
+	GROUP BY ue.ueid
+	ORDER BY er.erid, e.event_day"
+	@events = repository(:default).adapter.select(sql)
 	erb :view, :locals => { :active => 'view' }
 end
 

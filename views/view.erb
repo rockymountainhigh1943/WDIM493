@@ -1,3 +1,31 @@
+<div id="toolbar">
+	<a href="" onClick="window.print()">Print Schedule</a>
+</div>
 <img id="heading" src="/images/your-events.jpg" height="27" width="135" alt="Your Events" />
 
-<a href="/account/view/all">View all events</a>
+<table id="scheduleBox" width="100%" border="0">
+	<% @events.each do |event| %>
+	<tr>
+		<td class="blueLink"><%= event.event_day_name %> <% if event.month == 1 %>January<% end %>
+		<% if event.month == 2 %>February<% end %>
+		<% if event.month == 3 %>March<% end %>
+		<% if event.month == 4 %>April<% end %>
+		<% if event.month == 5 %>May<% end %>
+		<% if event.month == 6 %>June<% end %>
+		<% if event.month == 7 %>July<% end %>
+		<% if event.month == 8 %>August<% end %>
+		<% if event.month == 9 %>September<% end %>
+		<% if event.month == 10 %>October<% end %>
+		<% if event.month == 11 %>November<% end %>
+		<% if event.month == 12 %>December<% end %> <%= event.event_day %></td>
+		<td class="blueLink"><%= event.event_time %></td>
+		<td><u><%= event.event_name %></u>: 
+			<% e_type = EventType.all(:etid => event.type) %>
+			<%= e_type[0].name %></td>
+		<td><% e_location = EventLocation.all(:elid => event.location) %>
+			<%= e_location[0].name %></td>
+		<td class="greenLink"><% e_position = Position.all(:pid => event.position) %>
+			<%= e_position[0].name %></td>
+	</tr>
+	<% end %>
+</table>

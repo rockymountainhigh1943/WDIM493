@@ -87,7 +87,7 @@ $(function(){
 		// We set our url based on the position selected
 		$('a.'+id).attr('href', original + '-' + value);
 	});
-	// checks to see if position is set before confirminga
+	// checks to see if position is set before confirming
 	$('a[data-click]').click(function(e){
 		e.preventDefault();
 		if( $(this).attr('href') == "#" ) {

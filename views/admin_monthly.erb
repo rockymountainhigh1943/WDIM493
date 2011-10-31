@@ -20,8 +20,10 @@
 
 <table border="0" id="scheduleBox" width="100%">
 	<% @events.each do |event| %>
+	<% haveSQL = "SELECT COUNT(ueid) FROM user_events WHERE status = 2 AND event_id = " + event.eid.to_s
+	   have = repository(:default).adapter.select(haveSQL) %>
 		<tr>
-			<td><a href="/admin/schedule/event/<%= event.eid %>-<%= @month.erid %>"><%= event.event_day_name %> 
+			<td<% if event.need <= have[0] %> class="greenLink"<% end %>><a href="/admin/schedule/event/<%= event.eid %>-<%= @month.erid %>"><%= event.event_day_name %> 
 			<% if @month.month == 1 %>January<% end %>
 			<% if @month.month == 2 %>February<% end %>
 			<% if @month.month == 3 %>March<% end %>
@@ -35,16 +37,18 @@
 			<% if @month.month == 11 %>November<% end %>
 			<% if @month.month == 12 %>December<% end %>
 			 <%= event.event_day %></a></td>
-			 <td><%= event.event_name %>: 
+			 <td<% if event.need <= have[0] %> class="greenLink"<% end %>><%= event.event_name %>: 
 			 
 			 <% e_type = EventType.all(:etid => event.type) %>
 			 <%= e_type[0].name %>
 
 			 </td>
-			 <td class="blueLink"><a href="/admin/edit/event/<%= event.eid %>-<%= event.event_range %>">Edit</a> | <a href="/admin/delete/event/<%= event.eid %>-<%= @month.erid %>">Delete</a></td>
-			 <td>Need: <%= event.need %></td>
-			 <td>Have: <%= event.have %></td>
-			 <td>Status: <% if event.need == event.have %>Full<% else %><span class="red">Not Set</a><% end %></td>
+			 <td<% if event.need <= have[0] %> class="greenLink"<% else %> class="blueLink"<% end %>><a href="/admin/edit/event/<%= event.eid %>-<%= event.event_range %>">Edit</a> | <a href="/admin/delete/event/<%= event.eid %>-<%= @month.erid %>">Delete</a></td>
+			 <td<% if event.need <= have[0] %> class="greenLink"<% end %>>Need: <a href="/admin/edit/event/<%= event.eid %>-<%= event.event_range %>"><%= event.need %></a></td>
+			 <td<% if event.need <= have[0] %> class="greenLink"<% end %>>Have: 
+			   	<a href="/admin/schedule/event/<%= event.eid %>-<%= @month.erid %>"><%= have[0] %></a>
+			</td>
+			 <td<% if event.need <= have[0] %> class="greenLink"<% end %>>Status: <% if event.need <= have[0] %><span class="greenLink">Set!</span><% else %><span class="red">Not Set</a><% end %></td>
 		</tr>
 	<% end %>
 </table>

@@ -20,6 +20,8 @@
 
 <table border="0" id="scheduleBox" width="100%">
 	<% @events.each do |event| %>
+	<% haveSQL = "SELECT COUNT(ueid) FROM user_events WHERE status = 2 AND event_id = " + event.eid.to_s
+	   have = repository(:default).adapter.select(haveSQL) %>
 		<tr>
 			<td class="blueLink"><%= event.event_day_name %> 
 			<% if @month.month == 1 %>January<% end %>
@@ -40,7 +42,7 @@
 			 <%= e_type[0].name %>
 			 </td>
 			 <td>Need: <%= event.need %></td>
-			 <td>Status: <% if event.need == event.have %>Full<% else %><span class="red">Not Set</a><% end %></td>
+			 <td<% if event.need <= have[0] %> class="greenLink"<% end %>>Status: <% if event.need <= have[0] %><span class="greenLink">Set!</span><% else %><span class="red">Not Set</a><% end %></td>
 			 <%  
 			 	eventStatus = "SELECT status FROM user_events WHERE owner_id = " + @user.id.to_s + " AND event_id = " + event.eid.to_s
 			 	status = repository(:default).adapter.select(eventStatus)
