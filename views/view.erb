@@ -19,13 +19,7 @@
 		<% if event.month == 11 %>November<% end %>
 		<% if event.month == 12 %>December<% end %> <%= event.event_day %></td>
 		<td class="blueLink"><%= event.event_time %></td>
-		<td><u><%= event.event_name %></u>: 
-			<% e_type = EventType.all(:etid => event.type) %>
-			<%= e_type[0].name %></td>
-		<td><% e_location = EventLocation.all(:elid => event.location) %>
-			<%= e_location[0].name %></td>
-		<td class="greenLink"><% e_position = Position.all(:pid => event.position) %>
-			<%= e_position[0].name %></td>
+		
 	</tr>
 	<% end %>
 </table>
