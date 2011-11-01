@@ -14,6 +14,9 @@
 </div>
 
 <img id="heading" src="/images/event.jpg" height="27" width="63" alt="Event" />
+<div id="monthTitle4">
+<%= @event.event_name %>: <% e_type = EventType.all(:etid => @event.type) %> <%= e_type[0].name %>
+</div>
 <div id="monthTitle3">
 <%= @event.event_day_name %> 
 <% if @range.month == 1 %>January<% end %>
@@ -27,7 +30,7 @@
 <% if @range.month == 9 %>September<% end %>
 <% if @range.month == 10 %>October<% end %>
 <% if @range.month == 11 %>November<% end %>
-<% if @range.month == 12 %>December<% end %> <%= @event.event_day %>, <%= @range.year %> - <%= @event.event_time %> - <%= @event.event_name %>: <% e_type = EventType.all(:etid => @event.type) %> <%= e_type[0].name %>
+<% if @range.month == 12 %>December<% end %> <%= @event.event_day %>, <%= @range.year %> - <%= @event.event_time %>
 </div>
 
 <div id="eventInfo">

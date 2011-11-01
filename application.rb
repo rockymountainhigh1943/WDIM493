@@ -349,3 +349,49 @@ get '/admin/position/delete/:position' do |position|
 	end
 	redirect '/admin/positions?status=deleted'
 end
+
+### Add Locations
+get '/admin/locations' do
+	redirect '/' if !@user.is_admin
+	@locations = EventLocation.all
+	erb :locations, :locals => { :active => 'admin' }
+end
+
+post '/admin/location/add' do
+	redirect '/' if !@user.is_admin
+	newLocations = EventLocation.first_or_create(:elid => nil, :name => params['name'])
+	redirect '/admin/locations?status=added'
+end
+
+### Delete Location
+get '/admin/location/delete/:location' do |location|
+	redirect '/' if !@user.is_admin
+	deleteLocation = EventLocation.first(:elid => params['location'])
+	if deleteLocation
+		deleteLocation.destroy
+	end
+	redirect '/admin/locations?status=deleted'
+end
+
+### Add Event Type
+get '/admin/types' do
+	redirect '/' if !@user.is_admin
+	@types = EventType.all
+	erb :types, :locals => { :active => 'admin' }
+end
+
+post '/admin/type/add' do
+	redirect '/' if !@user.is_admin
+	newType = EventType.first_or_create(:etid => nil, :name => params['name'])
+	redirect '/admin/types?status=added'
+end
+
+### Delete Event Type
+get '/admin/type/delete/:type' do |type|
+	redirect '/' if !@user.is_admin
+	deleteType = EventType.first(:etid => params['type'])
+	if deleteType
+		deleteType.destroy
+	end
+	redirect '/admin/types?status=deleted'
+end

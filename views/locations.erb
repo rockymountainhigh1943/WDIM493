@@ -1,0 +1,40 @@
+<img id="heading" src="/images/locations-header.jpg" height="28" width="110" alt="Locations" />
+
+<% if params['status'] == "added" %>
+<div id="confirm">
+	Location Added!
+</div>
+<script type="text/javascript">
+	$('#confirm').show(350).delay(3000).hide(350);
+</script>
+<% end %>
+
+<% if params['status'] == "deleted" %>
+<div id="confirm">
+	Location Deleted!
+</div>
+<script type="text/javascript">
+	$('#confirm').show(350).delay(3000).hide(350);
+</script>
+<% end %>
+
+<p>Add new location below:</p>
+
+<form id="settings" method="POST" action="/admin/location/add">
+	<div class='item'>
+		Location Name
+		<input type="text" name="name" />
+	</div>
+	<input id="ss" type="image" src="/images/submit.jpg" />
+</form>
+
+<br /><br />
+
+<table id="showUsers" width="300" border="0">
+	<% @locations.each do |location| %>
+		<tr>
+			<td><%= location.name %></td>
+			<td class="blueLink"><a href="/admin/location/delete/<%= location.elid %>">Delete</a></td>
+		</tr>
+	<% end %>
+</table>

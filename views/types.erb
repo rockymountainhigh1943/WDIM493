@@ -1,0 +1,40 @@
+<img id="heading" src="/images/event-types.jpg" height="34" width="136" alt="Event Types" />
+
+<% if params['status'] == "added" %>
+<div id="confirm">
+	Event Type Added!
+</div>
+<script type="text/javascript">
+	$('#confirm').show(350).delay(3000).hide(350);
+</script>
+<% end %>
+
+<% if params['status'] == "deleted" %>
+<div id="confirm">
+	Event Type Deleted!
+</div>
+<script type="text/javascript">
+	$('#confirm').show(350).delay(3000).hide(350);
+</script>
+<% end %>
+
+<p>Add new Event Type below:</p>
+
+<form id="settings" method="POST" action="/admin/type/add">
+	<div class='item'>
+		Event Type
+		<input type="text" name="name" />
+	</div>
+	<input id="ss" type="image" src="/images/submit.jpg" />
+</form>
+
+<br /><br />
+
+<table id="showUsers" width="300" border="0">
+	<% @types.each do |type| %>
+		<tr>
+			<td><%= type.name %></td>
+			<td class="blueLink"><a href="/admin/type/delete/<%= type.etid %>">Delete</a></td>
+		</tr>
+	<% end %>
+</table>

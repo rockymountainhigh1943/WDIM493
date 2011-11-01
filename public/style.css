@@ -297,6 +297,15 @@ img#heading {
 	font-size: 20px;
 	margin-bottom: 5px;
 	margin-top: -10px;
+	margin-left: -2px;
+}
+
+#monthTitle4 {
+	color: #61B4CF;
+	font-size: 24px;
+	margin-bottom: 5px;
+	margin-left: -2px;
+	margin-top: -10px;
 }
 
 .red {
